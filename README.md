@@ -4,7 +4,14 @@
 Dashboard de pilotage SI (escalades, SLA, funnel) — données kit démo ServiceNow + Salesforce.
 
 ## Démo en ligne (GitHub Pages)
-Une fois publié, le dashboard est disponible via GitHub Pages (`/docs` ou racine `index.html`).
+
+**https://cyrano2200.github.io/equans-pilotage-si-powerbi/**
+
+## Ouvrir dans Codespaces
+
+**https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=cyrano2200/equans-pilotage-si-powerbi**
+
+Ou depuis le dépôt : bouton **Code** → **Codespaces** → **Create codespace on main**.
 
 ## Contenu
 | Fichier | Description |
@@ -15,10 +22,11 @@ Une fois publié, le dashboard est disponible via GitHub Pages (`/docs` ou racin
 | `powerquery/` | Scripts ServiceNow + Salesforce |
 | `docs/` | Maquettes + guide |
 | `START_HERE_FR.md` | Mode d'emploi |
+| `Equans_Pilotage_SI_PowerBI/` | Projet Power BI Desktop (.pbip) |
 
 ## Power BI Desktop
 1. Ouvrir Power BI Desktop  
-2. Importer `data/Equans_PowerBI_Pilotage_SI_Modele_Demo.xlsx`  
+2. Importer `data/Equans_PowerBI_Pilotage_SI_Modele_Demo.xlsx` (ou ouvrir le `.pbip`)  
 3. Coller les mesures `dax/Mesures_DAX.txt`  
 4. Reproduire la maquette `docs/dashboard_powerbi_style_helpdesk.png`
 
