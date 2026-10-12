@@ -1,0 +1,3 @@
+SourceKey,SourceName,Connector
+ServiceNow,ServiceNow,OData / REST
+Salesforce Case,Salesforce Service Cloud,Salesforce connector

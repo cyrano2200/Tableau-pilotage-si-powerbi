@@ -1,0 +1,401 @@
+TicketID,SourceSystem,CreatedDate,ClosedDate,Priority,Application,Category,Status,AssignmentLevel,HelpdeskTouched,EscalatedToN2,EscalatedToN3,ResolvedLevel,FirstResponseHours,ResolutionHours,SLA_FirstResponse_OK,SLA_Resolution_OK,Reopened,CSAT,BusinessUnit,Month
+INC-10001,ServiceNow,2026-09-11 03:01,2026-09-11 07:36,P2,Quickdevis,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.64,4.59,0,1,0,3,France Nord,2026-09
+INC-10002,ServiceNow,2026-05-26 07:32,2026-05-26 20:26,P3,Autre,Formation/usage,Closed,N2,1,1,0,N2,2.97,12.9,1,1,0,4,Belgium,2026-05
+CASE-10003,Salesforce Case,2026-06-11 04:13,2026-06-11 09:14,P3,Salesforce CRM,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,3.0,5.03,1,1,0,4.5,Corporate,2026-06
+CASE-10004,Salesforce Case,2026-04-21 17:18,2026-04-21 22:45,P3,SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,0.43,5.46,1,1,0,3.5,France Nord,2026-04
+INC-10005,ServiceNow,2026-07-07 08:29,2026-07-07 16:00,P3,SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,1.08,7.52,1,1,0,4,France Sud,2026-07
+CASE-10006,Salesforce Case,2026-07-28 12:17,2026-07-28 18:36,P3,Office 365,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,2.98,6.32,1,1,0,3,Corporate,2026-07
+CASE-10007,Salesforce Case,2026-06-08 02:13,2026-06-08 09:21,P3,Autre,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,1.85,7.14,1,1,0,4,France Sud,2026-06
+INC-10008,ServiceNow,2026-06-03 23:35,2026-06-04 07:33,P4,Interface CRM-SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,0.92,7.98,1,1,0,3.5,France Nord,2026-06
+CASE-10009,Salesforce Case,2026-05-10 20:10,2026-05-11 00:38,P3,Salesforce CRM,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,3.49,4.47,1,1,0,3,Belgium,2026-05
+INC-10010,ServiceNow,2026-09-12 10:07,2026-09-12 19:50,P2,Salesforce CRM,Formation/usage,Resolved,N2,1,1,0,N2,3.25,9.72,0,1,0,4.5,France Sud,2026-09
+CASE-10011,Salesforce Case,2026-07-05 05:34,2026-07-05 13:02,P4,Salesforce CRM,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,0.26,7.47,1,1,0,4.5,France Nord,2026-07
+INC-10012,ServiceNow,2026-06-01 18:05,2026-06-02 15:40,P3,Salesforce CRM,Interface,Resolved,N2,1,1,0,N2,3.11,21.59,1,1,0,5,France Sud,2026-06
+INC-10013,ServiceNow,2026-06-19 12:42,2026-06-19 15:44,P3,Office 365,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,0.94,3.04,1,1,0,4,France Nord,2026-06
+INC-10014,ServiceNow,2026-04-19 22:40,2026-04-20 04:11,P2,Salesforce CRM,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,0.99,5.52,1,1,0,4,France Sud,2026-04
+INC-10015,ServiceNow,2026-07-31 13:12,2026-07-31 14:06,P3,SAP,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,3.05,0.91,1,1,0,3.5,Corporate,2026-07
+INC-10016,ServiceNow,2026-06-26 03:15,2026-06-26 10:18,P3,Quickdevis,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,1.73,7.06,1,1,0,3.5,France Nord,2026-06
+INC-10017,ServiceNow,2026-04-24 07:10,2026-04-24 10:35,P3,Interface CRM-SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,0.21,3.43,1,1,0,4.5,Corporate,2026-04
+INC-10018,ServiceNow,2026-09-26 23:50,2026-09-27 04:40,P4,Quickdevis,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,3.4,4.84,1,1,0,5,France Nord,2026-09
+CASE-10019,Salesforce Case,2026-08-28 15:32,2026-08-28 20:29,P3,Salesforce CRM,Interface,Closed,Helpdesk,1,0,0,Helpdesk,0.81,4.96,1,1,0,4,France Nord,2026-08
+INC-10020,ServiceNow,2026-08-24 07:37,2026-08-24 15:07,P3,Interface CRM-SAP,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,1.93,7.51,1,1,0,5,Belgium,2026-08
+INC-10021,ServiceNow,2026-07-11 04:42,2026-07-11 12:40,P3,Salesforce CRM,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,3.49,7.97,1,1,0,4,France Sud,2026-07
+INC-10022,ServiceNow,2026-06-29 02:56,2026-06-30 03:51,P3,Interface CRM-SAP,Interface,Resolved,N2,1,1,0,N2,5.93,24.93,0,1,1,4.5,France Sud,2026-06
+INC-10023,ServiceNow,2026-06-07 03:56,2026-06-07 05:57,P3,SAP,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,2.57,2.03,1,1,0,4.5,Belgium,2026-06
+INC-10024,ServiceNow,2026-04-14 02:40,2026-04-15 06:23,P3,Salesforce CRM,Incident applicatif,Resolved,N2,1,1,0,N2,1.94,27.72,1,1,0,5,France Nord,2026-04
+INC-10025,ServiceNow,2026-04-20 22:57,2026-04-20 23:45,P1,SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,1.62,0.81,0,1,0,3,France Sud,2026-04
+INC-10026,ServiceNow,2026-09-22 07:42,2026-09-23 23:18,P4,Interface CRM-SAP,Interface,Closed,N3,1,1,1,N3,4.37,39.6,1,1,0,4,France Nord,2026-09
+INC-10027,ServiceNow,2026-05-16 23:59,2026-05-17 07:26,P4,Autre,Formation/usage,Resolved,N2,1,1,0,N2,4.83,7.46,1,1,0,4.5,France Sud,2026-05
+CASE-10028,Salesforce Case,2026-07-27 11:19,2026-07-27 13:54,P4,Quickdevis,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.51,2.59,1,1,0,4.5,Corporate,2026-07
+CASE-10029,Salesforce Case,2026-09-21 17:21,2026-09-21 18:08,P2,SAP,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,3.45,0.79,0,1,0,5,Corporate,2026-09
+INC-10030,ServiceNow,2026-09-03 16:07,2026-09-04 13:20,P3,SAP,Accès & droits,Closed,N2,1,1,0,N2,5.59,21.23,0,1,0,4,Corporate,2026-09
+INC-10031,ServiceNow,2026-04-18 21:58,2026-04-19 12:24,P3,Salesforce CRM,Formation/usage,Resolved,N2,1,1,0,N2,4.17,14.44,0,1,0,4,Corporate,2026-04
+INC-10032,ServiceNow,2026-09-18 12:43,2026-09-18 15:29,P2,Office 365,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,2.95,2.78,0,1,0,5,Corporate,2026-09
+INC-10033,ServiceNow,2026-07-23 21:13,2026-07-24 02:41,P4,Autre,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,1.14,5.48,1,1,0,3.5,Belgium,2026-07
+INC-10034,ServiceNow,2026-05-28 06:09,2026-05-29 06:18,P2,Interface CRM-SAP,Interface,Closed,N2,1,1,0,N2,2.78,24.15,0,0,0,5,Corporate,2026-05
+INC-10035,ServiceNow,2026-06-02 04:41,2026-06-02 10:24,P4,Salesforce CRM,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,2.85,5.72,1,1,0,4,Corporate,2026-06
+INC-10036,ServiceNow,2026-05-05 14:42,2026-05-05 18:59,P3,SAP,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,2.57,4.29,1,1,0,4.5,Corporate,2026-05
+INC-10037,ServiceNow,2026-07-25 08:48,2026-07-25 09:52,P3,Office 365,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,1.11,1.08,1,1,0,4.5,Belgium,2026-07
+INC-10038,ServiceNow,2026-08-17 02:08,2026-08-17 05:06,P3,Quickdevis,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,1.57,2.98,1,1,0,3,Corporate,2026-08
+INC-10039,ServiceNow,2026-07-09 18:44,2026-07-09 21:28,P4,Office 365,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,3.31,2.74,1,1,0,5,Corporate,2026-07
+INC-10040,ServiceNow,2026-05-27 08:27,2026-05-28 17:52,P3,Autre,Formation/usage,Closed,N2,1,1,0,N2,5.12,33.43,0,1,0,3,France Nord,2026-05
+INC-10041,ServiceNow,2026-04-22 20:27,2026-04-22 23:24,P3,Salesforce CRM,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,0.9,2.95,1,1,0,5,Corporate,2026-04
+INC-10042,ServiceNow,2026-06-04 02:30,2026-06-04 07:53,P3,SAP,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,2.78,5.39,1,1,0,4,France Nord,2026-06
+INC-10043,ServiceNow,2026-09-07 04:15,2026-09-07 07:31,P3,Office 365,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,1.05,3.27,1,1,0,3.5,Belgium,2026-09
+CASE-10044,Salesforce Case,2026-04-28 18:01,2026-04-30 00:35,P3,Interface CRM-SAP,Demande service,Resolved,N2,1,1,0,N2,3.76,30.58,1,1,0,4.5,France Nord,2026-04
+INC-10045,ServiceNow,2026-06-28 17:27,2026-06-28 21:37,P2,Autre,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,1.59,4.18,1,1,0,5,France Sud,2026-06
+INC-10046,ServiceNow,2026-07-21 05:46,2026-07-22 04:43,P3,Office 365,Interface,Resolved,N2,1,1,0,N2,5.04,22.96,0,1,0,4,Belgium,2026-07
+INC-10047,ServiceNow,2026-07-25 07:48,2026-07-25 09:39,P3,Interface CRM-SAP,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,3.01,1.86,1,1,0,4.5,Belgium,2026-07
+INC-10048,ServiceNow,2026-08-31 22:56,2026-09-01 03:35,P1,Quickdevis,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.54,4.66,0,0,0,4.5,Corporate,2026-08
+INC-10049,ServiceNow,2026-04-05 02:18,2026-04-05 06:46,P3,SAP,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.76,4.48,1,1,0,5,Corporate,2026-04
+INC-10050,ServiceNow,2026-06-09 09:16,2026-06-11 03:39,P4,SAP,Accès & droits,Closed,N3,1,1,1,N3,8.9,42.39,0,1,0,4.5,France Nord,2026-06
+INC-10051,ServiceNow,2026-05-20 09:14,2026-05-20 10:08,P3,Autre,Interface,Closed,Helpdesk,1,0,0,Helpdesk,0.35,0.91,1,1,0,4,France Nord,2026-05
+INC-10052,ServiceNow,2026-04-04 18:18,2026-04-04 19:39,P3,Quickdevis,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,3.04,1.36,1,1,0,4.5,France Nord,2026-04
+INC-10053,ServiceNow,2026-05-09 04:51,2026-05-09 09:49,P3,Quickdevis,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.57,4.97,1,1,0,5,Corporate,2026-05
+INC-10054,ServiceNow,2026-06-16 18:27,2026-06-16 23:38,P3,Office 365,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.72,5.19,1,1,0,3.5,France Sud,2026-06
+INC-10055,ServiceNow,2026-05-15 17:04,2026-05-15 19:43,P3,Autre,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,0.31,2.66,1,1,0,4.5,France Sud,2026-05
+INC-10056,ServiceNow,2026-06-07 20:37,2026-06-08 03:55,P4,Interface CRM-SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,2.34,7.31,1,1,0,3.5,France Sud,2026-06
+CASE-10057,Salesforce Case,2026-06-18 19:47,2026-06-18 23:18,P4,Interface CRM-SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.2,3.52,1,1,0,4.5,France Nord,2026-06
+INC-10058,ServiceNow,2026-09-01 01:56,2026-09-01 08:42,P3,SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,3.37,6.77,1,1,0,3,France Nord,2026-09
+INC-10059,ServiceNow,2026-05-15 15:33,2026-05-15 23:19,P4,Quickdevis,Interface,Closed,Helpdesk,1,0,0,Helpdesk,2.89,7.77,1,1,0,5,Belgium,2026-05
+INC-10060,ServiceNow,2026-09-19 03:54,2026-09-19 10:06,P3,Interface CRM-SAP,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,1.52,6.2,1,1,1,3.5,Belgium,2026-09
+INC-10061,ServiceNow,2026-06-22 03:49,2026-06-23 00:24,P3,Salesforce CRM,Formation/usage,Closed,N2,1,1,0,N2,0.8,20.59,1,1,0,4.5,France Nord,2026-06
+INC-10062,ServiceNow,2026-05-23 08:35,2026-05-23 13:39,P3,Autre,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,3.41,5.07,1,1,0,4,France Nord,2026-05
+INC-10063,ServiceNow,2026-08-20 13:05,2026-08-21 22:55,P4,Salesforce CRM,Demande service,Closed,N2,1,1,0,N2,1.35,33.84,1,1,0,4.5,Corporate,2026-08
+INC-10064,ServiceNow,2026-07-30 07:29,2026-07-31 12:12,P3,Office 365,Interface,Closed,N2,1,1,0,N2,0.88,28.73,1,1,0,5,France Nord,2026-07
+CASE-10065,Salesforce Case,2026-06-12 23:19,2026-06-13 13:57,P3,Autre,Demande service,Closed,N2,1,1,0,N2,3.16,14.64,1,1,0,5,Belgium,2026-06
+INC-10066,ServiceNow,2026-05-19 22:15,2026-05-20 05:36,P2,Interface CRM-SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.76,7.35,1,1,0,4,France Nord,2026-05
+INC-10067,ServiceNow,2026-05-03 16:37,2026-05-03 22:32,P2,Interface CRM-SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,1.71,5.92,1,1,0,4,Corporate,2026-05
+INC-10068,ServiceNow,2026-06-07 10:39,2026-06-08 13:39,P3,SAP,Formation/usage,Resolved,N2,1,1,0,N2,2.24,27.0,1,1,0,3,France Sud,2026-06
+INC-10069,ServiceNow,2026-09-09 21:58,2026-09-10 05:11,P2,Salesforce CRM,Demande service,Resolved,N2,1,1,0,N2,4.37,7.22,0,1,0,4.5,France Nord,2026-09
+INC-10070,ServiceNow,2026-06-23 01:18,2026-06-23 03:09,P3,Quickdevis,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,2.45,1.85,1,1,0,5,Corporate,2026-06
+INC-10071,ServiceNow,2026-08-28 04:14,2026-08-28 11:29,P3,SAP,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.86,7.26,1,1,0,4,Corporate,2026-08
+INC-10072,ServiceNow,2026-06-28 18:19,2026-06-29 13:46,P3,SAP,Demande service,Closed,N2,1,1,0,N2,2.62,19.46,1,1,0,5,Belgium,2026-06
+INC-10073,ServiceNow,2026-04-06 21:25,2026-04-11 05:22,P3,Autre,Formation/usage,Closed,N3,1,1,1,N3,9.45,103.95,0,0,0,4,France Sud,2026-04
+INC-10074,ServiceNow,2026-09-10 06:39,2026-09-11 07:19,P4,Autre,Formation/usage,Resolved,N2,1,1,0,N2,5.47,24.68,1,1,0,4.5,Belgium,2026-09
+INC-10075,ServiceNow,2026-05-04 02:58,2026-05-04 10:45,P4,Quickdevis,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,1.98,7.79,1,1,0,4.5,Belgium,2026-05
+CASE-10076,Salesforce Case,2026-08-02 09:47,2026-08-02 16:44,P4,Interface CRM-SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,3.39,6.95,1,1,0,5,France Nord,2026-08
+INC-10077,ServiceNow,2026-07-11 00:16,2026-07-11 06:56,P3,Autre,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.13,6.67,1,1,0,3.5,Corporate,2026-07
+CASE-10078,Salesforce Case,2026-04-07 19:56,2026-04-07 23:54,P3,Office 365,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,2.3,3.98,1,1,0,5,France Sud,2026-04
+CASE-10079,Salesforce Case,2026-04-12 01:19,2026-04-12 06:50,P2,Quickdevis,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,1.7,5.53,1,1,0,5,Corporate,2026-04
+INC-10080,ServiceNow,2026-09-15 03:53,2026-09-15 07:43,P3,SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,0.92,3.84,1,1,0,5,Belgium,2026-09
+INC-10081,ServiceNow,2026-08-18 20:22,2026-08-19 01:40,P3,Salesforce CRM,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,0.9,5.3,1,1,0,3,France Sud,2026-08
+INC-10082,ServiceNow,2026-05-03 18:13,2026-05-03 21:10,P4,Quickdevis,Interface,Closed,Helpdesk,1,0,0,Helpdesk,3.07,2.96,1,1,0,3,France Sud,2026-05
+CASE-10083,Salesforce Case,2026-05-04 17:16,2026-05-04 19:32,P2,Salesforce CRM,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,2.81,2.28,0,1,0,4,France Nord,2026-05
+INC-10084,ServiceNow,2026-05-03 23:26,2026-05-04 19:33,P4,Interface CRM-SAP,Demande service,Closed,N2,1,1,0,N2,1.1,20.12,1,1,0,3,Corporate,2026-05
+CASE-10085,Salesforce Case,2026-09-12 00:03,2026-09-12 03:52,P4,Interface CRM-SAP,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.55,3.83,1,1,0,5,France Nord,2026-09
+INC-10086,ServiceNow,2026-05-03 08:39,2026-05-04 08:01,P3,SAP,Demande service,Resolved,N2,1,1,0,N2,3.0,23.37,1,1,0,3.5,Corporate,2026-05
+INC-10087,ServiceNow,2026-07-25 07:26,2026-07-25 12:55,P3,Interface CRM-SAP,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.61,5.49,1,1,0,4,France Nord,2026-07
+INC-10088,ServiceNow,2026-04-24 02:05,2026-04-24 06:47,P4,SAP,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,2.14,4.71,1,1,0,3.5,Belgium,2026-04
+CASE-10089,Salesforce Case,2026-09-18 13:55,2026-09-18 18:13,P2,SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,0.54,4.31,1,1,0,4.5,France Nord,2026-09
+INC-10090,ServiceNow,2026-06-29 17:23,2026-07-03 04:17,P3,Quickdevis,Demande service,Closed,N3,1,1,1,N3,10.18,82.9,0,0,0,3,France Nord,2026-06
+CASE-10091,Salesforce Case,2026-05-17 08:44,2026-05-17 14:09,P4,SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,0.67,5.43,1,1,0,3,France Sud,2026-05
+INC-10092,ServiceNow,2026-07-06 13:29,2026-07-06 19:09,P3,Autre,Incident applicatif,Resolved,N2,1,1,0,N2,0.97,5.68,1,1,0,3,Belgium,2026-07
+INC-10093,ServiceNow,2026-07-23 21:27,2026-07-24 10:30,P3,SAP,Qualité data,Closed,N2,1,1,0,N2,2.86,13.06,1,1,0,4.5,France Nord,2026-07
+INC-10094,ServiceNow,2026-05-27 12:38,2026-05-28 08:33,P2,Quickdevis,Qualité data,Closed,N2,1,1,0,N2,1.16,19.92,1,0,0,4,France Sud,2026-05
+INC-10095,ServiceNow,2026-08-07 17:53,2026-08-08 01:17,P3,Interface CRM-SAP,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,0.26,7.41,1,1,0,5,Corporate,2026-08
+INC-10096,ServiceNow,2026-06-14 03:25,2026-06-18 12:29,P3,Office 365,Demande service,Resolved,N3,1,1,1,N3,2.88,105.07,1,0,0,5,Corporate,2026-06
+INC-10097,ServiceNow,2026-06-19 23:21,2026-06-20 01:18,P4,Salesforce CRM,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,1.95,1.95,1,1,0,5,France Sud,2026-06
+INC-10098,ServiceNow,2026-04-27 04:16,2026-04-27 08:28,P3,Autre,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,2.75,4.21,1,1,0,4.5,Belgium,2026-04
+INC-10099,ServiceNow,2026-05-09 14:04,2026-05-09 16:53,P3,SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,1.87,2.83,1,1,0,3,Belgium,2026-05
+CASE-10100,Salesforce Case,2026-04-20 20:55,2026-04-21 04:34,P2,Office 365,Interface,Closed,Helpdesk,1,0,0,Helpdesk,2.12,7.66,0,1,0,3,France Sud,2026-04
+INC-10101,ServiceNow,2026-06-22 19:30,2026-06-24 03:36,P4,Interface CRM-SAP,Accès & droits,Resolved,N3,1,1,1,N3,11.82,32.1,0,1,0,3,Corporate,2026-06
+INC-10102,ServiceNow,2026-07-22 16:33,2026-07-22 21:31,P3,SAP,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,1.32,4.98,1,1,0,5,Belgium,2026-07
+INC-10103,ServiceNow,2026-04-25 17:43,2026-04-26 02:14,P3,Autre,Interface,Resolved,N2,1,1,0,N2,3.71,8.53,1,1,0,5,France Nord,2026-04
+INC-10104,ServiceNow,2026-06-19 17:24,2026-06-24 09:00,P3,Quickdevis,Formation/usage,Closed,N3,1,1,1,N3,11.97,111.6,0,0,0,5,France Nord,2026-06
+CASE-10105,Salesforce Case,2026-07-02 09:11,2026-07-02 10:15,P3,Interface CRM-SAP,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,0.65,1.08,1,1,0,3.5,Belgium,2026-07
+INC-10106,ServiceNow,2026-09-06 04:38,2026-09-06 21:47,P2,Autre,Interface,Closed,N2,1,1,0,N2,2.91,17.15,0,0,0,4,Belgium,2026-09
+INC-10107,ServiceNow,2026-07-24 07:34,2026-07-24 15:26,P4,Interface CRM-SAP,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,3.33,7.88,1,1,0,4.5,Corporate,2026-07
+INC-10108,ServiceNow,2026-05-12 06:51,2026-05-12 14:21,P4,Salesforce CRM,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.42,7.51,1,1,0,3.5,France Nord,2026-05
+CASE-10109,Salesforce Case,2026-05-12 08:28,2026-05-12 23:39,P2,Interface CRM-SAP,Accès & droits,Closed,N2,1,1,0,N2,2.98,15.19,0,0,1,3,Belgium,2026-05
+INC-10110,ServiceNow,2026-05-31 12:05,2026-05-31 13:36,P1,Salesforce CRM,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.81,1.53,0,1,0,4.5,Corporate,2026-05
+CASE-10111,Salesforce Case,2026-07-24 19:00,2026-07-24 23:27,P1,Quickdevis,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,2.6,4.46,0,0,0,4.5,Belgium,2026-07
+INC-10112,ServiceNow,2026-05-02 01:15,2026-05-02 06:13,P4,Interface CRM-SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,3.19,4.98,1,1,1,4,Belgium,2026-05
+INC-10113,ServiceNow,2026-07-19 00:39,2026-07-19 03:51,P3,Quickdevis,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.93,3.2,1,1,0,3,Corporate,2026-07
+CASE-10114,Salesforce Case,2026-04-12 20:24,2026-04-13 20:30,P3,Salesforce CRM,Incident applicatif,Resolved,N2,1,1,0,N2,4.53,24.1,0,1,0,5,France Nord,2026-04
+CASE-10115,Salesforce Case,2026-06-30 17:21,2026-07-01 01:40,P2,Autre,Demande service,Resolved,N2,1,1,0,N2,1.5,8.32,1,1,0,4.5,Belgium,2026-06
+INC-10116,ServiceNow,2026-05-22 01:50,2026-05-22 05:53,P1,SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,2.89,4.05,0,0,1,4,Belgium,2026-05
+INC-10117,ServiceNow,2026-04-13 20:21,2026-04-18 17:49,P4,Interface CRM-SAP,Demande service,Closed,N3,1,1,1,N3,5.87,117.48,1,1,0,4.5,Belgium,2026-04
+INC-10118,ServiceNow,2026-04-22 23:27,2026-04-23 02:24,P3,Quickdevis,Interface,Closed,Helpdesk,1,0,0,Helpdesk,0.54,2.96,1,1,0,4.5,France Sud,2026-04
+INC-10119,ServiceNow,2026-09-24 14:22,2026-09-26 00:41,P4,SAP,Interface,Closed,N2,1,1,0,N2,5.89,34.33,1,1,0,5,France Sud,2026-09
+INC-10120,ServiceNow,2026-04-08 04:54,2026-04-08 08:09,P4,Salesforce CRM,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,2.77,3.25,1,1,0,3,Corporate,2026-04
+CASE-10121,Salesforce Case,2026-07-04 11:28,2026-07-04 13:50,P3,Office 365,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,2.34,2.37,1,1,0,4,Corporate,2026-07
+CASE-10122,Salesforce Case,2026-08-22 03:16,2026-08-22 07:26,P4,Quickdevis,Interface,Closed,Helpdesk,1,0,0,Helpdesk,3.22,4.18,1,1,0,3.5,France Sud,2026-08
+INC-10123,ServiceNow,2026-07-23 02:51,2026-07-23 07:25,P4,SAP,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,0.41,4.57,1,1,0,4,Belgium,2026-07
+CASE-10124,Salesforce Case,2026-08-09 07:07,2026-08-09 10:23,P4,Quickdevis,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,2.03,3.27,1,1,0,4,France Nord,2026-08
+INC-10125,ServiceNow,2026-06-19 12:45,2026-06-19 18:04,P3,Interface CRM-SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,3.41,5.32,1,1,0,5,France Sud,2026-06
+CASE-10126,Salesforce Case,2026-05-04 13:32,2026-05-04 16:27,P2,Salesforce CRM,Interface,Closed,Helpdesk,1,0,0,Helpdesk,0.74,2.92,1,1,0,5,France Nord,2026-05
+CASE-10127,Salesforce Case,2026-06-04 06:40,2026-06-04 11:58,P3,Autre,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,0.51,5.31,1,1,0,4,Belgium,2026-06
+CASE-10128,Salesforce Case,2026-08-23 01:52,2026-08-23 06:39,P2,Autre,Interface,Closed,Helpdesk,1,0,0,Helpdesk,0.9,4.79,1,1,0,3,Belgium,2026-08
+INC-10129,ServiceNow,2026-09-12 09:30,2026-09-12 11:11,P4,Interface CRM-SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,2.47,1.69,1,1,0,4.5,Belgium,2026-09
+CASE-10130,Salesforce Case,2026-09-03 04:20,2026-09-03 09:02,P3,SAP,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,1.42,4.71,1,1,0,4.5,Belgium,2026-09
+INC-10131,ServiceNow,2026-07-25 07:09,2026-07-25 14:25,P3,Interface CRM-SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,3.38,7.27,1,1,0,5,France Sud,2026-07
+INC-10132,ServiceNow,2026-08-06 16:29,2026-08-07 03:21,P3,Salesforce CRM,Accès & droits,Closed,N2,1,1,0,N2,5.82,10.88,0,1,0,3,Corporate,2026-08
+INC-10133,ServiceNow,2026-08-31 20:43,2026-08-31 23:57,P3,Salesforce CRM,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,1.07,3.24,1,1,0,3,France Nord,2026-08
+INC-10134,ServiceNow,2026-08-24 17:12,2026-08-24 23:53,P3,Interface CRM-SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,2.01,6.69,1,1,0,3.5,France Nord,2026-08
+CASE-10135,Salesforce Case,2026-07-10 11:50,2026-07-10 16:05,P3,SAP,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,1.88,4.25,1,1,0,4,Corporate,2026-07
+INC-10136,ServiceNow,2026-08-11 14:09,2026-08-11 19:16,P3,SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,1.5,5.12,1,1,0,5,Belgium,2026-08
+INC-10137,ServiceNow,2026-07-31 00:23,2026-07-31 07:25,P2,Interface CRM-SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,3.17,7.04,0,1,0,4.5,France Sud,2026-07
+INC-10138,ServiceNow,2026-04-14 18:30,2026-04-14 19:14,P3,Office 365,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,2.45,0.74,1,1,0,3.5,France Nord,2026-04
+INC-10139,ServiceNow,2026-07-22 10:26,2026-07-26 09:04,P3,Interface CRM-SAP,Interface,Resolved,N3,1,1,1,N3,10.73,94.64,0,0,0,4,Belgium,2026-07
+INC-10140,ServiceNow,2026-09-17 15:33,2026-09-17 21:50,P4,Interface CRM-SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,1.37,6.29,1,1,0,4.5,France Sud,2026-09
+INC-10141,ServiceNow,2026-06-03 08:35,2026-06-04 03:56,P4,SAP,Incident applicatif,Closed,N2,1,1,0,N2,3.19,19.35,1,1,0,4.5,France Nord,2026-06
+INC-10142,ServiceNow,2026-08-25 21:34,2026-08-26 03:25,P4,SAP,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,1.15,5.86,1,1,0,4.5,Corporate,2026-08
+INC-10143,ServiceNow,2026-05-25 06:52,2026-05-25 11:46,P4,Autre,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,2.23,4.9,1,1,0,4,France Nord,2026-05
+INC-10144,ServiceNow,2026-04-26 13:21,2026-04-30 04:01,P2,Quickdevis,Accès & droits,Closed,N3,1,1,1,N3,3.58,86.68,0,0,0,4.5,France Sud,2026-04
+INC-10145,ServiceNow,2026-06-13 10:18,2026-06-13 16:13,P4,Salesforce CRM,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.97,5.92,1,1,0,4,France Sud,2026-06
+INC-10146,ServiceNow,2026-04-10 12:50,2026-04-10 14:08,P4,SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,2.07,1.3,1,1,0,4.5,Corporate,2026-04
+INC-10147,ServiceNow,2026-05-05 16:29,2026-05-05 20:56,P4,SAP,Qualité data,Resolved,N2,1,1,0,N2,4.45,4.45,1,1,0,4.5,France Sud,2026-05
+INC-10148,ServiceNow,2026-09-04 20:57,2026-09-05 04:48,P3,SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,0.51,7.86,1,1,0,4,Belgium,2026-09
+CASE-10149,Salesforce Case,2026-07-08 07:28,2026-07-09 09:38,P4,SAP,Interface,Closed,N2,1,1,0,N2,4.1,26.17,1,1,0,3.5,Belgium,2026-07
+INC-10150,ServiceNow,2026-05-11 12:43,2026-05-11 20:16,P4,Autre,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,2.31,7.55,1,1,0,4,France Sud,2026-05
+INC-10151,ServiceNow,2026-08-01 04:29,2026-08-01 09:00,P3,Interface CRM-SAP,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,1.75,4.53,1,1,0,4,France Nord,2026-08
+INC-10152,ServiceNow,2026-08-13 14:33,2026-08-13 18:50,P2,Office 365,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,2.01,4.29,0,1,0,4,Belgium,2026-08
+INC-10153,ServiceNow,2026-08-12 14:07,2026-08-12 22:20,P4,Interface CRM-SAP,Accès & droits,Closed,N2,1,1,0,N2,0.81,8.22,1,1,0,3,Belgium,2026-08
+CASE-10154,Salesforce Case,2026-04-06 12:16,2026-04-06 13:14,P4,Office 365,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.34,0.98,1,1,0,3.5,France Nord,2026-04
+CASE-10155,Salesforce Case,2026-06-13 13:11,2026-06-14 07:32,P4,Autre,Formation/usage,Closed,N2,1,1,0,N2,5.4,18.35,1,1,0,5,France Nord,2026-06
+INC-10156,ServiceNow,2026-09-22 21:55,2026-09-23 02:23,P3,SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,1.97,4.47,1,1,0,4,France Nord,2026-09
+INC-10157,ServiceNow,2026-06-16 14:43,2026-06-16 17:17,P3,Interface CRM-SAP,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,1.34,2.57,1,1,0,3.5,Corporate,2026-06
+INC-10158,ServiceNow,2026-09-05 00:15,2026-09-05 01:07,P2,Salesforce CRM,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,2.52,0.87,0,1,0,5,France Sud,2026-09
+CASE-10159,Salesforce Case,2026-08-17 06:48,2026-08-17 11:37,P2,Office 365,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,3.22,4.82,0,1,0,5,Belgium,2026-08
+INC-10160,ServiceNow,2026-05-07 21:33,2026-05-11 09:39,P3,Salesforce CRM,Interface,Resolved,N3,1,1,1,N3,11.12,84.1,0,0,0,4.5,Belgium,2026-05
+CASE-10161,Salesforce Case,2026-09-12 21:24,2026-09-13 03:33,P3,Interface CRM-SAP,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,1.44,6.16,1,1,0,4,France Sud,2026-09
+INC-10162,ServiceNow,2026-07-28 01:35,2026-07-28 04:33,P3,Office 365,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,1.04,2.98,1,1,0,4.5,France Nord,2026-07
+INC-10163,ServiceNow,2026-08-16 23:53,2026-08-17 01:47,P3,Autre,Interface,Closed,Helpdesk,1,0,0,Helpdesk,3.08,1.91,1,1,0,4,France Sud,2026-08
+INC-10164,ServiceNow,2026-06-25 09:58,2026-06-26 12:13,P4,Autre,Accès & droits,Resolved,N2,1,1,0,N2,5.53,26.26,1,1,0,5,Belgium,2026-06
+INC-10165,ServiceNow,2026-06-12 12:29,2026-06-12 13:43,P3,SAP,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,1.84,1.24,1,1,0,4.5,France Sud,2026-06
+INC-10166,ServiceNow,2026-07-04 10:26,2026-07-04 15:18,P4,Autre,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,2.03,4.88,1,1,0,4.5,France Sud,2026-07
+INC-10167,ServiceNow,2026-06-24 07:24,2026-06-25 03:02,P2,Office 365,Formation/usage,Closed,N2,1,1,0,N2,4.7,19.64,0,0,0,4.5,France Sud,2026-06
+INC-10168,ServiceNow,2026-06-30 05:08,2026-06-30 11:30,P3,Office 365,Formation/usage,Resolved,N2,1,1,0,N2,5.11,6.38,0,1,0,3,Corporate,2026-06
+INC-10169,ServiceNow,2026-05-06 20:14,2026-05-07 01:30,P2,Quickdevis,Interface,Closed,Helpdesk,1,0,0,Helpdesk,0.4,5.28,1,1,0,4.5,France Nord,2026-05
+INC-10170,ServiceNow,2026-04-02 17:35,2026-04-02 21:51,P1,Autre,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,1.15,4.27,0,0,0,5,France Nord,2026-04
+INC-10171,ServiceNow,2026-04-25 16:09,2026-04-25 19:27,P3,SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,1.51,3.3,1,1,0,4,Belgium,2026-04
+CASE-10172,Salesforce Case,2026-09-23 02:41,2026-09-23 06:45,P3,Salesforce CRM,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,1.44,4.07,1,1,0,4,Corporate,2026-09
+INC-10173,ServiceNow,2026-07-21 20:50,2026-07-22 22:59,P4,Salesforce CRM,Interface,Resolved,N2,1,1,0,N2,5.46,26.15,1,1,0,4.5,France Nord,2026-07
+INC-10174,ServiceNow,2026-09-23 08:57,2026-09-23 10:31,P3,Quickdevis,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,0.88,1.58,1,1,0,5,Belgium,2026-09
+INC-10175,ServiceNow,2026-05-12 18:15,2026-05-12 19:48,P4,Autre,Interface,Closed,Helpdesk,1,0,0,Helpdesk,2.69,1.55,1,1,0,3.5,France Nord,2026-05
+CASE-10176,Salesforce Case,2026-04-26 13:14,2026-04-26 13:57,P3,Office 365,Interface,Closed,Helpdesk,1,0,0,Helpdesk,2.75,0.72,1,1,0,4.5,France Sud,2026-04
+INC-10177,ServiceNow,2026-07-01 17:24,2026-07-01 23:53,P3,Autre,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,2.24,6.49,1,1,0,3.5,France Sud,2026-07
+INC-10178,ServiceNow,2026-07-07 22:50,2026-07-08 01:38,P4,SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,0.22,2.81,1,1,0,4.5,France Sud,2026-07
+INC-10179,ServiceNow,2026-04-23 05:27,2026-04-23 06:39,P3,Interface CRM-SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.37,1.2,1,1,0,5,France Nord,2026-04
+CASE-10180,Salesforce Case,2026-06-14 13:24,2026-06-14 16:45,P4,Office 365,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,0.76,3.36,1,1,0,4.5,Corporate,2026-06
+INC-10181,ServiceNow,2026-05-08 02:10,2026-05-08 08:04,P3,Interface CRM-SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,3.32,5.91,1,1,0,4,France Nord,2026-05
+CASE-10182,Salesforce Case,2026-05-05 09:00,2026-05-06 15:06,P3,Office 365,Demande service,Closed,N2,1,1,0,N2,2.34,30.1,1,1,0,4,Belgium,2026-05
+INC-10183,ServiceNow,2026-09-02 22:12,2026-09-03 02:22,P2,Interface CRM-SAP,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,2.49,4.18,0,1,0,4,Corporate,2026-09
+INC-10184,ServiceNow,2026-06-11 12:23,2026-06-11 13:05,P3,Office 365,Interface,Closed,Helpdesk,1,0,0,Helpdesk,2.73,0.7,1,1,0,4,Belgium,2026-06
+CASE-10185,Salesforce Case,2026-09-25 02:52,2026-09-25 05:16,P4,Autre,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,1.2,2.4,1,1,0,5,France Nord,2026-09
+INC-10186,ServiceNow,2026-07-24 19:30,2026-07-24 22:42,P3,Autre,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,2.81,3.2,1,1,0,3.5,France Sud,2026-07
+INC-10187,ServiceNow,2026-09-16 21:22,2026-09-17 03:31,P3,Office 365,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,1.52,6.15,1,1,0,5,France Nord,2026-09
+INC-10188,ServiceNow,2026-04-26 08:14,2026-04-26 11:39,P3,Office 365,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.67,3.43,1,1,0,4,France Nord,2026-04
+INC-10189,ServiceNow,2026-08-02 03:18,2026-08-02 07:12,P4,Salesforce CRM,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.23,3.91,1,1,0,4.5,Corporate,2026-08
+INC-10190,ServiceNow,2026-04-25 14:46,2026-04-26 15:30,P3,SAP,Accès & droits,Resolved,N2,1,1,0,N2,5.17,24.74,0,1,0,4,France Sud,2026-04
+INC-10191,ServiceNow,2026-08-20 05:21,2026-08-20 10:46,P4,Quickdevis,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,0.82,5.43,1,1,0,4,Corporate,2026-08
+INC-10192,ServiceNow,2026-07-09 00:45,2026-07-09 05:16,P3,Autre,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,2.84,4.53,1,1,0,4,France Nord,2026-07
+INC-10193,ServiceNow,2026-06-07 21:55,2026-06-07 23:16,P4,SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,1.5,1.36,1,1,0,4.5,Belgium,2026-06
+INC-10194,ServiceNow,2026-09-05 18:05,2026-09-05 19:38,P3,Quickdevis,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,1.43,1.56,1,1,0,4,Corporate,2026-09
+INC-10195,ServiceNow,2026-05-18 15:40,2026-05-18 17:34,P4,Quickdevis,Interface,Closed,Helpdesk,1,0,0,Helpdesk,1.15,1.9,1,1,0,3,France Nord,2026-05
+CASE-10196,Salesforce Case,2026-08-03 04:12,2026-08-03 07:49,P4,Office 365,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.46,3.62,1,1,0,4.5,France Nord,2026-08
+CASE-10197,Salesforce Case,2026-08-23 00:50,2026-08-23 04:45,P3,SAP,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,0.76,3.93,1,1,0,4.5,France Nord,2026-08
+CASE-10198,Salesforce Case,2026-06-08 17:52,2026-06-08 21:33,P3,Salesforce CRM,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,0.92,3.69,1,1,0,4,France Nord,2026-06
+CASE-10199,Salesforce Case,2026-07-25 08:22,2026-07-25 14:02,P2,Salesforce CRM,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,2.63,5.67,0,1,0,5,France Sud,2026-07
+INC-10200,ServiceNow,2026-05-23 06:51,2026-05-23 12:37,P3,SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,1.27,5.78,1,1,0,4.5,France Sud,2026-05
+CASE-10201,Salesforce Case,2026-07-15 01:17,2026-07-15 03:38,P2,Quickdevis,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,1.26,2.36,1,1,0,5,France Sud,2026-07
+INC-10202,ServiceNow,2026-08-26 20:17,2026-08-28 00:16,P3,Salesforce CRM,Formation/usage,Closed,N2,1,1,0,N2,2.72,27.99,1,1,0,5,Corporate,2026-08
+CASE-10203,Salesforce Case,2026-06-23 18:00,2026-06-25 01:12,P4,Salesforce CRM,Formation/usage,Resolved,N2,1,1,0,N2,4.34,31.2,1,1,0,5,Corporate,2026-06
+INC-10204,ServiceNow,2026-05-25 15:17,2026-05-25 21:41,P3,Office 365,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,3.01,6.41,1,1,0,3,France Nord,2026-05
+INC-10205,ServiceNow,2026-09-08 14:01,2026-09-08 16:02,P4,Interface CRM-SAP,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,3.36,2.02,1,1,0,4,France Sud,2026-09
+INC-10206,ServiceNow,2026-06-10 02:41,2026-06-10 05:28,P2,Autre,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.51,2.79,1,1,0,4,France Nord,2026-06
+INC-10207,ServiceNow,2026-09-28 03:00,2026-09-28 03:33,P2,Office 365,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,1.67,0.56,1,1,0,3.5,France Sud,2026-09
+INC-10208,ServiceNow,2026-08-01 02:14,2026-08-01 03:45,P4,Salesforce CRM,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,3.11,1.53,1,1,0,4,France Nord,2026-08
+INC-10209,ServiceNow,2026-08-14 18:00,2026-08-15 01:24,P2,SAP,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.67,7.4,0,1,0,4.5,France Nord,2026-08
+INC-10210,ServiceNow,2026-04-26 04:48,2026-04-26 07:22,P4,SAP,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,0.66,2.58,1,1,0,4.5,Belgium,2026-04
+INC-10211,ServiceNow,2026-05-23 16:38,2026-05-24 00:17,P4,SAP,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,3.16,7.66,1,1,0,3.5,Corporate,2026-05
+INC-10212,ServiceNow,2026-09-11 19:04,2026-09-11 23:49,P4,SAP,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,3.04,4.76,1,1,0,4,France Nord,2026-09
+INC-10213,ServiceNow,2026-04-05 18:04,2026-04-05 22:19,P2,Salesforce CRM,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,2.27,4.26,0,1,0,5,France Sud,2026-04
+INC-10214,ServiceNow,2026-06-11 02:19,2026-06-11 08:32,P4,Quickdevis,Interface,Closed,Helpdesk,1,0,0,Helpdesk,2.14,6.22,1,1,0,3.5,Corporate,2026-06
+INC-10215,ServiceNow,2026-06-01 01:15,2026-06-01 07:18,P3,Interface CRM-SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,1.22,6.06,1,1,0,3.5,France Sud,2026-06
+INC-10216,ServiceNow,2026-09-27 00:10,2026-09-27 06:17,P3,Office 365,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,1.43,6.12,1,1,0,3.5,Belgium,2026-09
+INC-10217,ServiceNow,2026-07-19 08:33,2026-07-19 11:45,P4,Office 365,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.7,3.2,1,1,0,4,France Sud,2026-07
+INC-10218,ServiceNow,2026-06-05 03:57,2026-06-05 10:55,P4,Quickdevis,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,0.35,6.97,1,1,0,4.5,Corporate,2026-06
+CASE-10219,Salesforce Case,2026-05-09 05:59,2026-05-09 08:20,P1,Autre,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,0.94,2.36,1,1,0,5,France Nord,2026-05
+INC-10220,ServiceNow,2026-08-25 11:07,2026-08-26 17:44,P4,Quickdevis,Qualité data,Closed,N3,1,1,1,N3,11.54,30.62,0,1,0,4.5,Belgium,2026-08
+INC-10221,ServiceNow,2026-04-23 17:29,2026-04-25 04:35,P2,Office 365,Incident applicatif,Resolved,N2,1,1,0,N2,2.53,35.1,0,0,0,4,France Sud,2026-04
+INC-10222,ServiceNow,2026-04-02 13:01,2026-04-03 20:11,P3,Autre,Accès & droits,Resolved,N2,1,1,0,N2,4.12,31.17,0,1,0,3.5,France Sud,2026-04
+CASE-10223,Salesforce Case,2026-07-17 15:03,2026-07-17 21:53,P2,SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,0.96,6.84,1,1,0,5,France Nord,2026-07
+INC-10224,ServiceNow,2026-08-27 03:32,2026-08-27 11:15,P4,Salesforce CRM,Interface,Closed,Helpdesk,1,0,0,Helpdesk,1.64,7.73,1,1,0,4.5,Corporate,2026-08
+INC-10225,ServiceNow,2026-09-27 23:20,2026-09-28 00:39,P3,Salesforce CRM,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,2.74,1.32,1,1,0,4.5,Belgium,2026-09
+INC-10226,ServiceNow,2026-07-14 03:34,2026-07-14 04:44,P4,Interface CRM-SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,3.01,1.18,1,1,0,4.5,France Sud,2026-07
+INC-10227,ServiceNow,2026-06-23 04:05,2026-06-23 10:44,P4,Interface CRM-SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,1.19,6.65,1,1,0,5,France Sud,2026-06
+CASE-10228,Salesforce Case,2026-04-25 14:06,2026-04-29 21:10,P2,Salesforce CRM,Accès & droits,Closed,N3,1,1,1,N3,3.31,103.07,0,0,0,3.5,France Nord,2026-04
+CASE-10229,Salesforce Case,2026-04-06 02:12,2026-04-07 06:18,P3,Quickdevis,Accès & droits,Closed,N3,1,1,1,N3,5.32,28.1,0,1,0,4,Corporate,2026-04
+INC-10230,ServiceNow,2026-08-06 00:24,2026-08-06 02:00,P2,Quickdevis,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,1.67,1.61,1,1,0,4,Corporate,2026-08
+INC-10231,ServiceNow,2026-07-15 17:30,2026-07-15 21:56,P3,Quickdevis,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,3.12,4.44,1,1,0,3,Belgium,2026-07
+INC-10232,ServiceNow,2026-08-01 17:50,2026-08-01 20:43,P4,Office 365,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,0.79,2.89,1,1,0,4.5,Corporate,2026-08
+INC-10233,ServiceNow,2026-08-14 11:49,2026-08-14 16:19,P2,Quickdevis,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,1.0,4.5,1,1,0,3,Corporate,2026-08
+INC-10234,ServiceNow,2026-06-30 05:11,2026-06-30 10:57,P3,Autre,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.15,5.78,1,1,0,4,Corporate,2026-06
+INC-10235,ServiceNow,2026-08-17 09:11,2026-08-17 09:41,P2,Quickdevis,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,1.94,0.51,1,1,0,4,Belgium,2026-08
+INC-10236,ServiceNow,2026-05-16 10:03,2026-05-18 21:54,P3,Quickdevis,Accès & droits,Resolved,N3,1,1,1,N3,11.61,59.86,0,1,0,5,Belgium,2026-05
+CASE-10237,Salesforce Case,2026-06-17 10:08,2026-06-18 21:08,P4,Interface CRM-SAP,Formation/usage,Resolved,N2,1,1,0,N2,1.46,35.0,1,1,0,5,France Sud,2026-06
+INC-10238,ServiceNow,2026-07-06 09:46,2026-07-11 09:13,P2,Autre,Accès & droits,Resolved,N3,1,1,1,N3,5.92,119.45,0,0,0,3,Belgium,2026-07
+INC-10239,ServiceNow,2026-09-04 07:40,2026-09-04 17:02,P4,Quickdevis,Incident applicatif,Closed,N2,1,1,0,N2,5.9,9.37,1,1,0,3.5,Corporate,2026-09
+INC-10240,ServiceNow,2026-04-03 08:13,2026-04-04 01:38,P2,SAP,Accès & droits,Closed,N2,1,1,0,N2,2.91,17.43,0,0,0,5,Corporate,2026-04
+INC-10241,ServiceNow,2026-06-29 17:24,2026-06-30 22:58,P3,Office 365,Formation/usage,Closed,N2,1,1,0,N2,2.98,29.57,1,1,1,3,Belgium,2026-06
+INC-10242,ServiceNow,2026-04-27 02:21,2026-04-27 03:33,P3,Autre,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,3.16,1.2,1,1,0,4.5,Corporate,2026-04
+CASE-10243,Salesforce Case,2026-09-15 05:38,2026-09-15 11:21,P2,Salesforce CRM,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,0.83,5.73,1,1,0,4.5,Belgium,2026-09
+INC-10244,ServiceNow,2026-05-31 03:03,2026-05-31 04:12,P3,Interface CRM-SAP,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,0.21,1.16,1,1,0,4.5,France Nord,2026-05
+INC-10245,ServiceNow,2026-04-07 06:10,2026-04-07 10:20,P4,Interface CRM-SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.51,4.17,1,1,0,3.5,France Sud,2026-04
+INC-10246,ServiceNow,2026-07-04 12:23,2026-07-04 17:06,P1,Interface CRM-SAP,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,2.96,4.73,0,0,0,3.5,Belgium,2026-07
+INC-10247,ServiceNow,2026-08-17 13:48,2026-08-17 20:48,P3,Interface CRM-SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,1.97,7.0,1,1,0,4,Belgium,2026-08
+CASE-10248,Salesforce Case,2026-04-21 12:57,2026-04-21 20:48,P1,Office 365,Interface,Resolved,N2,1,1,0,N2,3.91,7.85,0,0,0,4,France Sud,2026-04
+INC-10249,ServiceNow,2026-05-20 04:02,2026-05-20 16:17,P4,Interface CRM-SAP,Qualité data,Resolved,N2,1,1,0,N2,5.09,12.25,1,1,0,3.5,Corporate,2026-05
+INC-10250,ServiceNow,2026-08-21 12:35,2026-08-22 06:00,P3,Interface CRM-SAP,Accès & droits,Resolved,N2,1,1,0,N2,3.37,17.43,1,1,0,4,France Nord,2026-08
+INC-10251,ServiceNow,2026-08-23 03:50,2026-08-23 08:37,P3,SAP,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,2.36,4.79,1,1,0,4,Corporate,2026-08
+INC-10252,ServiceNow,2026-05-07 19:38,2026-05-07 23:41,P3,Interface CRM-SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,0.36,4.06,1,1,0,5,Belgium,2026-05
+CASE-10253,Salesforce Case,2026-06-17 09:17,2026-06-18 13:05,P4,Autre,Accès & droits,Closed,N2,1,1,0,N2,2.15,27.8,1,1,0,5,Corporate,2026-06
+INC-10254,ServiceNow,2026-09-02 20:05,2026-09-02 23:23,P2,Interface CRM-SAP,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,1.9,3.3,1,1,0,4,Belgium,2026-09
+CASE-10255,Salesforce Case,2026-08-08 12:08,2026-08-08 14:08,P3,Office 365,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,3.09,2.01,1,1,0,3,France Nord,2026-08
+INC-10256,ServiceNow,2026-07-02 22:12,2026-07-02 22:55,P4,Office 365,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,0.61,0.73,1,1,0,4.5,Corporate,2026-07
+INC-10257,ServiceNow,2026-08-29 17:22,2026-08-29 22:57,P4,SAP,Formation/usage,Resolved,N2,1,1,0,N2,0.65,5.59,1,1,0,4,France Sud,2026-08
+INC-10258,ServiceNow,2026-09-21 06:17,2026-09-21 08:05,P3,Autre,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,0.64,1.8,1,1,0,4,Belgium,2026-09
+CASE-10259,Salesforce Case,2026-09-12 08:27,2026-09-12 12:51,P4,Interface CRM-SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,1.2,4.4,1,1,0,3.5,Belgium,2026-09
+INC-10260,ServiceNow,2026-08-22 20:38,2026-08-23 01:56,P3,Salesforce CRM,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,3.46,5.3,1,1,0,4.5,France Sud,2026-08
+INC-10261,ServiceNow,2026-05-09 16:48,2026-05-09 22:42,P2,Office 365,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,2.45,5.91,0,1,0,4.5,Corporate,2026-05
+INC-10262,ServiceNow,2026-07-13 12:47,2026-07-13 18:26,P4,Office 365,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,2.55,5.65,1,1,0,4.5,Belgium,2026-07
+INC-10263,ServiceNow,2026-05-14 21:56,2026-05-16 07:08,P3,Interface CRM-SAP,Qualité data,Resolved,N2,1,1,0,N2,3.57,33.2,1,1,0,5,France Sud,2026-05
+CASE-10264,Salesforce Case,2026-06-30 07:47,2026-06-30 14:39,P3,SAP,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,1.17,6.88,1,1,0,3.5,France Sud,2026-06
+INC-10265,ServiceNow,2026-08-07 03:55,2026-08-07 18:53,P3,Interface CRM-SAP,Accès & droits,Resolved,N2,1,1,0,N2,5.96,14.97,0,1,0,4.5,Belgium,2026-08
+INC-10266,ServiceNow,2026-05-17 02:31,2026-05-17 04:35,P4,SAP,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.69,2.07,1,1,0,4,France Nord,2026-05
+INC-10267,ServiceNow,2026-05-04 19:27,2026-05-05 01:25,P3,Interface CRM-SAP,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,1.96,5.98,1,1,0,5,France Nord,2026-05
+INC-10268,ServiceNow,2026-09-21 00:40,2026-09-21 05:35,P2,SAP,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,1.47,4.92,1,1,0,3,Belgium,2026-09
+INC-10269,ServiceNow,2026-07-26 23:33,2026-07-27 02:44,P3,Autre,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,3.17,3.19,1,1,0,5,France Sud,2026-07
+INC-10270,ServiceNow,2026-05-28 23:08,2026-05-29 05:34,P1,Office 365,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,2.55,6.44,0,0,0,4.5,France Nord,2026-05
+CASE-10271,Salesforce Case,2026-09-17 03:41,2026-09-17 06:05,P1,Salesforce CRM,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,0.61,2.4,1,1,0,4,Belgium,2026-09
+INC-10272,ServiceNow,2026-07-17 21:06,2026-07-17 22:23,P3,Office 365,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,2.94,1.29,1,1,0,3.5,France Nord,2026-07
+INC-10273,ServiceNow,2026-04-28 15:12,2026-04-28 16:54,P4,Office 365,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,1.55,1.7,1,1,0,4,Belgium,2026-04
+INC-10274,ServiceNow,2026-05-31 00:00,2026-05-31 06:21,P4,Office 365,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,3.33,6.35,1,1,0,3.5,France Sud,2026-05
+INC-10275,ServiceNow,2026-07-26 09:16,2026-07-27 02:53,P2,Quickdevis,Accès & droits,Resolved,N2,1,1,0,N2,4.22,17.63,0,0,0,3,France Sud,2026-07
+INC-10276,ServiceNow,2026-09-17 20:10,2026-09-18 06:01,P4,Office 365,Incident applicatif,Closed,N2,1,1,0,N2,4.98,9.85,1,1,0,4.5,Corporate,2026-09
+INC-10277,ServiceNow,2026-09-24 15:51,2026-09-24 23:42,P4,Quickdevis,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,2.6,7.86,1,1,0,3.5,Corporate,2026-09
+INC-10278,ServiceNow,2026-08-24 21:28,2026-08-25 04:15,P3,SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,2.46,6.79,1,1,0,4,Corporate,2026-08
+INC-10279,ServiceNow,2026-04-29 13:28,2026-04-30 11:55,P3,SAP,Accès & droits,Resolved,N2,1,1,0,N2,4.72,22.45,0,1,0,5,Corporate,2026-04
+INC-10280,ServiceNow,2026-09-17 23:15,2026-09-18 06:26,P3,Autre,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,2.93,7.19,1,1,0,3,Corporate,2026-09
+CASE-10281,Salesforce Case,2026-08-05 05:04,2026-08-05 10:23,P3,SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,0.93,5.32,1,1,0,4,Corporate,2026-08
+INC-10282,ServiceNow,2026-07-23 18:28,2026-07-24 11:22,P3,SAP,Accès & droits,Resolved,N2,1,1,0,N2,0.6,16.91,1,1,1,3,Belgium,2026-07
+INC-10283,ServiceNow,2026-08-09 17:13,2026-08-12 01:05,P3,SAP,Incident applicatif,Closed,N3,1,1,1,N3,10.44,55.87,0,1,0,4.5,Corporate,2026-08
+INC-10284,ServiceNow,2026-04-30 03:48,2026-05-01 06:16,P1,SAP,Formation/usage,Closed,N2,1,1,0,N2,3.37,26.47,0,0,0,4,France Sud,2026-04
+INC-10285,ServiceNow,2026-07-14 03:16,2026-07-14 09:08,P2,Interface CRM-SAP,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,2.78,5.88,0,1,0,5,France Nord,2026-07
+INC-10286,ServiceNow,2026-07-25 14:42,2026-07-25 22:12,P3,Interface CRM-SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,0.36,7.51,1,1,0,4.5,France Sud,2026-07
+INC-10287,ServiceNow,2026-05-03 03:24,2026-05-04 05:33,P3,SAP,Interface,Closed,N2,1,1,0,N2,3.85,26.16,1,1,0,5,Belgium,2026-05
+INC-10288,ServiceNow,2026-07-25 04:08,2026-07-25 11:05,P4,Autre,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,2.51,6.96,1,1,0,4,France Sud,2026-07
+INC-10289,ServiceNow,2026-09-07 22:18,2026-09-08 02:34,P4,Quickdevis,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,3.36,4.28,1,1,0,5,Belgium,2026-09
+INC-10290,ServiceNow,2026-08-22 15:37,2026-08-27 00:57,P3,Interface CRM-SAP,Formation/usage,Resolved,N3,1,1,1,N3,4.86,105.34,0,0,0,3.5,Corporate,2026-08
+INC-10291,ServiceNow,2026-05-08 01:42,2026-05-08 02:40,P3,Quickdevis,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,0.68,0.97,1,1,0,4,Belgium,2026-05
+CASE-10292,Salesforce Case,2026-07-25 03:39,2026-07-25 07:58,P4,Quickdevis,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,1.48,4.33,1,1,0,4.5,Corporate,2026-07
+CASE-10293,Salesforce Case,2026-07-09 13:50,2026-07-09 18:59,P3,Office 365,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,1.03,5.15,1,1,0,4.5,Belgium,2026-07
+INC-10294,ServiceNow,2026-08-29 17:47,2026-08-29 18:50,P4,Quickdevis,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,3.45,1.06,1,1,0,3.5,France Nord,2026-08
+INC-10295,ServiceNow,2026-07-19 08:35,2026-07-19 10:14,P2,SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,2.54,1.66,0,1,0,5,Belgium,2026-07
+INC-10296,ServiceNow,2026-08-04 18:35,2026-08-04 19:35,P4,SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,0.81,1.01,1,1,0,5,France Nord,2026-08
+INC-10297,ServiceNow,2026-06-29 07:56,2026-06-29 12:24,P3,SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,2.68,4.48,1,1,0,3,Belgium,2026-06
+INC-10298,ServiceNow,2026-07-24 07:57,2026-07-24 15:19,P4,Quickdevis,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.26,7.37,1,1,0,5,Belgium,2026-07
+CASE-10299,Salesforce Case,2026-04-07 16:52,2026-04-07 22:15,P3,Office 365,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,1.18,5.39,1,1,0,3.5,France Sud,2026-04
+INC-10300,ServiceNow,2026-08-16 17:00,2026-08-17 14:12,P2,Autre,Qualité data,Resolved,N2,1,1,0,N2,1.07,21.21,1,0,0,5,France Sud,2026-08
+INC-10301,ServiceNow,2026-04-07 14:45,2026-04-08 02:01,P2,Salesforce CRM,Qualité data,Closed,N2,1,1,0,N2,3.66,11.28,0,1,0,5,Corporate,2026-04
+INC-10302,ServiceNow,2026-07-20 10:01,2026-07-20 15:28,P2,Salesforce CRM,Formation/usage,Resolved,N2,1,1,0,N2,4.6,5.46,0,1,0,5,Belgium,2026-07
+INC-10303,ServiceNow,2026-09-23 09:38,2026-09-23 13:41,P4,Interface CRM-SAP,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,2.38,4.05,1,1,0,4,Belgium,2026-09
+INC-10304,ServiceNow,2026-09-10 04:19,2026-09-10 08:58,P4,Autre,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,3.33,4.65,1,1,0,3.5,France Nord,2026-09
+INC-10305,ServiceNow,2026-08-25 19:25,2026-08-28 11:01,P4,SAP,Qualité data,Resolved,N3,1,1,1,N3,5.44,63.61,1,1,0,4,France Sud,2026-08
+INC-10306,ServiceNow,2026-05-27 19:53,2026-06-01 19:20,P2,Autre,Interface,Closed,N3,1,1,1,N3,11.32,119.45,0,0,0,3.5,France Nord,2026-05
+INC-10307,ServiceNow,2026-06-04 03:12,2026-06-04 04:27,P3,SAP,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,2.36,1.25,1,1,0,4,Corporate,2026-06
+INC-10308,ServiceNow,2026-07-25 10:39,2026-07-25 18:20,P3,Quickdevis,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,2.87,7.69,1,1,0,5,France Sud,2026-07
+CASE-10309,Salesforce Case,2026-09-12 13:17,2026-09-13 03:03,P2,Autre,Incident applicatif,Resolved,N2,1,1,0,N2,2.47,13.78,0,0,0,4,Belgium,2026-09
+INC-10310,ServiceNow,2026-05-06 17:12,2026-05-06 21:30,P4,Salesforce CRM,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,0.26,4.3,1,1,1,5,France Nord,2026-05
+CASE-10311,Salesforce Case,2026-08-20 08:34,2026-08-20 14:51,P3,Autre,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,0.94,6.29,1,1,0,4.5,Corporate,2026-08
+INC-10312,ServiceNow,2026-08-07 16:05,2026-08-09 08:00,P3,Autre,Qualité data,Resolved,N3,1,1,1,N3,8.14,39.92,0,1,0,4.5,France Sud,2026-08
+CASE-10313,Salesforce Case,2026-08-23 18:42,2026-08-24 06:07,P2,Autre,Demande service,Resolved,N2,1,1,0,N2,4.69,11.42,0,1,0,4,France Sud,2026-08
+INC-10314,ServiceNow,2026-08-11 11:24,2026-08-12 08:04,P3,Salesforce CRM,Accès & droits,Resolved,N2,1,1,0,N2,4.37,20.68,0,1,0,4.5,Corporate,2026-08
+INC-10315,ServiceNow,2026-09-15 12:23,2026-09-15 14:33,P4,Salesforce CRM,Interface,Closed,Helpdesk,1,0,0,Helpdesk,3.41,2.17,1,1,0,5,Corporate,2026-09
+CASE-10316,Salesforce Case,2026-09-02 00:32,2026-09-02 02:09,P3,Quickdevis,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,1.13,1.63,1,1,0,3.5,Corporate,2026-09
+INC-10317,ServiceNow,2026-06-24 23:07,2026-06-24 23:47,P3,Quickdevis,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,2.95,0.67,1,1,0,4,France Nord,2026-06
+INC-10318,ServiceNow,2026-08-25 04:03,2026-08-25 04:41,P4,Office 365,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,2.06,0.64,1,1,0,4.5,France Sud,2026-08
+CASE-10319,Salesforce Case,2026-07-24 19:30,2026-07-25 01:45,P2,Interface CRM-SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,2.12,6.26,0,1,0,4.5,Belgium,2026-07
+INC-10320,ServiceNow,2026-07-26 19:37,2026-07-27 02:56,P3,Quickdevis,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,1.92,7.32,1,1,0,4,France Sud,2026-07
+INC-10321,ServiceNow,2026-07-31 19:38,2026-08-01 02:53,P4,Office 365,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,2.38,7.26,1,1,0,3,Corporate,2026-07
+INC-10322,ServiceNow,2026-07-04 01:44,2026-07-04 09:02,P2,Interface CRM-SAP,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,2.86,7.31,0,1,0,3.5,France Sud,2026-07
+INC-10323,ServiceNow,2026-06-05 15:49,2026-06-06 18:30,P4,SAP,Interface,Resolved,N2,1,1,0,N2,1.54,26.69,1,1,0,3.5,Corporate,2026-06
+CASE-10324,Salesforce Case,2026-09-15 06:44,2026-09-15 09:11,P3,Salesforce CRM,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,2.13,2.46,1,1,0,5,Corporate,2026-09
+CASE-10325,Salesforce Case,2026-05-23 13:35,2026-05-23 16:23,P3,SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,1.04,2.8,1,1,0,5,France Nord,2026-05
+INC-10326,ServiceNow,2026-05-29 14:50,2026-05-29 19:27,P2,Quickdevis,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,1.32,4.63,1,1,0,3,Corporate,2026-05
+INC-10327,ServiceNow,2026-09-10 00:51,2026-09-10 04:07,P2,Office 365,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,1.07,3.28,1,1,0,5,Belgium,2026-09
+CASE-10328,Salesforce Case,2026-08-31 01:49,2026-08-31 08:20,P3,Interface CRM-SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,2.37,6.53,1,1,0,3,France Sud,2026-08
+INC-10329,ServiceNow,2026-09-20 01:23,2026-09-20 18:01,P1,Quickdevis,Accès & droits,Resolved,N2,1,1,0,N2,2.44,16.64,0,0,0,3,France Nord,2026-09
+CASE-10330,Salesforce Case,2026-08-19 09:46,2026-08-19 19:59,P4,SAP,Incident applicatif,Closed,N2,1,1,0,N2,3.83,10.22,1,1,0,3,France Sud,2026-08
+INC-10331,ServiceNow,2026-07-14 16:06,2026-07-18 22:09,P3,SAP,Accès & droits,Closed,N3,1,1,1,N3,10.76,102.06,0,0,0,4.5,Corporate,2026-07
+INC-10332,ServiceNow,2026-06-02 10:49,2026-06-02 14:11,P3,Office 365,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,1.05,3.37,1,1,0,4,Belgium,2026-06
+INC-10333,ServiceNow,2026-07-15 11:33,2026-07-15 17:40,P4,SAP,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,1.52,6.12,1,1,0,4,Belgium,2026-07
+INC-10334,ServiceNow,2026-06-30 06:57,2026-06-30 18:28,P2,Autre,Formation/usage,Resolved,N2,1,1,0,N2,4.55,11.52,0,1,0,4.5,France Sud,2026-06
+INC-10335,ServiceNow,2026-05-22 07:53,2026-05-23 07:31,P2,Salesforce CRM,Accès & droits,Closed,N2,1,1,0,N2,4.15,23.64,0,0,0,3,Belgium,2026-05
+CASE-10336,Salesforce Case,2026-09-06 10:31,2026-09-06 17:53,P4,Office 365,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,3.45,7.37,1,1,0,4,France Nord,2026-09
+CASE-10337,Salesforce Case,2026-08-13 13:30,2026-08-13 21:21,P1,SAP,Demande service,Resolved,N2,1,1,0,N2,3.01,7.85,0,0,0,5,France Nord,2026-08
+INC-10338,ServiceNow,2026-09-20 06:24,2026-09-20 08:55,P3,Office 365,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,1.07,2.52,1,1,0,5,France Sud,2026-09
+INC-10339,ServiceNow,2026-08-06 13:13,2026-08-06 14:41,P4,SAP,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,0.79,1.48,1,1,0,4,Belgium,2026-08
+CASE-10340,Salesforce Case,2026-05-31 17:27,2026-05-31 21:06,P2,Autre,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,0.23,3.66,1,1,0,5,Belgium,2026-05
+INC-10341,ServiceNow,2026-06-04 17:54,2026-06-04 21:58,P3,Autre,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,2.89,4.07,1,1,0,4.5,Belgium,2026-06
+INC-10342,ServiceNow,2026-07-02 11:35,2026-07-02 17:11,P4,SAP,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.36,5.6,1,1,0,4,Belgium,2026-07
+INC-10343,ServiceNow,2026-06-23 21:32,2026-06-24 05:12,P4,Salesforce CRM,Demande service,Closed,Helpdesk,1,0,0,Helpdesk,1.73,7.67,1,1,0,5,Corporate,2026-06
+INC-10344,ServiceNow,2026-04-19 02:10,2026-04-20 10:34,P3,Autre,Incident applicatif,Closed,N2,1,1,0,N2,2.68,32.41,1,1,0,5,Corporate,2026-04
+INC-10345,ServiceNow,2026-05-13 05:54,2026-05-13 15:14,P4,Autre,Incident applicatif,Closed,N2,1,1,0,N2,0.94,9.34,1,1,0,3.5,France Nord,2026-05
+CASE-10346,Salesforce Case,2026-04-07 12:33,2026-04-07 19:41,P2,SAP,Interface,Closed,Helpdesk,1,0,0,Helpdesk,2.36,7.14,0,1,0,4,Corporate,2026-04
+INC-10347,ServiceNow,2026-09-08 04:08,2026-09-08 11:06,P2,Salesforce CRM,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,3.22,6.98,0,1,0,4.5,France Sud,2026-09
+INC-10348,ServiceNow,2026-09-26 17:11,2026-09-27 14:15,P3,Autre,Formation/usage,Resolved,N2,1,1,0,N2,4.02,21.08,0,1,0,4.5,France Nord,2026-09
+INC-10349,ServiceNow,2026-07-23 09:23,2026-07-23 10:54,P2,Salesforce CRM,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,2.7,1.52,0,1,0,3,Corporate,2026-07
+INC-10350,ServiceNow,2026-06-16 00:49,2026-06-16 07:56,P3,Quickdevis,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,0.82,7.12,1,1,0,4,Corporate,2026-06
+INC-10351,ServiceNow,2026-07-06 07:16,2026-07-07 11:02,P3,Office 365,Interface,Resolved,N2,1,1,0,N2,2.07,27.77,1,1,0,5,France Nord,2026-07
+INC-10352,ServiceNow,2026-05-17 04:18,2026-05-17 13:10,P3,Interface CRM-SAP,Incident applicatif,Resolved,N2,1,1,0,N2,2.26,8.87,1,1,0,3,France Nord,2026-05
+INC-10353,ServiceNow,2026-06-12 08:08,2026-06-12 11:11,P4,Quickdevis,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.83,3.06,1,1,0,4.5,Corporate,2026-06
+INC-10354,ServiceNow,2026-09-26 01:21,2026-09-26 05:55,P4,Quickdevis,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.49,4.57,1,1,0,4.5,France Nord,2026-09
+INC-10355,ServiceNow,2026-05-02 22:15,2026-05-03 05:15,P4,Quickdevis,Formation/usage,Closed,N2,1,1,0,N2,4.54,7.01,1,1,0,4,Corporate,2026-05
+INC-10356,ServiceNow,2026-09-22 09:59,2026-09-23 10:24,P3,Salesforce CRM,Formation/usage,Resolved,N2,1,1,0,N2,1.89,24.43,1,1,0,3,France Nord,2026-09
+INC-10357,ServiceNow,2026-05-31 20:27,2026-05-31 21:01,P2,SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,2.8,0.57,0,1,0,4.5,Belgium,2026-05
+INC-10358,ServiceNow,2026-04-23 07:10,2026-04-23 08:49,P3,SAP,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,1.37,1.65,1,1,0,3.5,Corporate,2026-04
+CASE-10359,Salesforce Case,2026-05-30 10:35,2026-05-30 13:46,P4,Interface CRM-SAP,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,2.47,3.19,1,1,0,3,Corporate,2026-05
+INC-10360,ServiceNow,2026-08-22 09:34,2026-08-22 12:07,P2,Quickdevis,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,2.62,2.56,0,1,0,4,France Sud,2026-08
+INC-10361,ServiceNow,2026-07-25 09:52,2026-07-25 16:59,P3,Salesforce CRM,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.62,7.12,1,1,0,5,Belgium,2026-07
+CASE-10362,Salesforce Case,2026-04-17 21:34,2026-04-18 14:40,P2,Autre,Demande service,Resolved,N2,1,1,0,N2,2.06,17.11,0,0,0,3.5,France Nord,2026-04
+INC-10363,ServiceNow,2026-05-04 05:55,2026-05-04 09:19,P2,Quickdevis,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,2.32,3.41,0,1,0,4.5,Belgium,2026-05
+INC-10364,ServiceNow,2026-05-27 19:45,2026-05-27 20:51,P4,Quickdevis,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,3.14,1.1,1,1,0,3,Corporate,2026-05
+CASE-10365,Salesforce Case,2026-07-04 22:03,2026-07-05 05:37,P3,Salesforce CRM,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,1.2,7.58,1,1,0,3.5,France Sud,2026-07
+INC-10366,ServiceNow,2026-08-15 12:12,2026-08-16 16:04,P3,Office 365,Formation/usage,Closed,N2,1,1,0,N2,3.57,27.88,1,1,0,5,Corporate,2026-08
+INC-10367,ServiceNow,2026-04-27 05:50,2026-04-27 09:39,P3,SAP,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,3.49,3.82,1,1,0,5,Belgium,2026-04
+CASE-10368,Salesforce Case,2026-07-15 20:27,2026-07-16 01:04,P3,Quickdevis,Interface,Closed,Helpdesk,1,0,0,Helpdesk,1.44,4.63,1,1,0,5,Corporate,2026-07
+INC-10369,ServiceNow,2026-07-11 00:46,2026-07-11 01:19,P3,Salesforce CRM,Interface,Closed,Helpdesk,1,0,0,Helpdesk,3.14,0.55,1,1,0,4,France Nord,2026-07
+INC-10370,ServiceNow,2026-09-24 08:58,2026-09-24 10:38,P3,Office 365,Qualité data,Resolved,Helpdesk,1,0,0,Helpdesk,1.72,1.67,1,1,0,4,Belgium,2026-09
+INC-10371,ServiceNow,2026-06-16 02:36,2026-06-17 09:01,P4,Autre,Accès & droits,Closed,N2,1,1,0,N2,1.45,30.42,1,1,0,3.5,France Nord,2026-06
+CASE-10372,Salesforce Case,2026-08-26 12:05,2026-08-26 19:56,P4,SAP,Incident applicatif,Closed,N2,1,1,0,N2,5.62,7.86,1,1,0,3,France Nord,2026-08
+INC-10373,ServiceNow,2026-06-18 16:02,2026-06-18 21:35,P3,SAP,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,0.71,5.55,1,1,0,4.5,France Sud,2026-06
+INC-10374,ServiceNow,2026-07-20 09:50,2026-07-20 13:19,P2,Salesforce CRM,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,0.36,3.49,1,1,0,5,France Sud,2026-07
+INC-10375,ServiceNow,2026-08-02 17:12,2026-08-02 19:33,P3,Quickdevis,Interface,Closed,Helpdesk,1,0,0,Helpdesk,2.63,2.35,1,1,0,5,France Nord,2026-08
+INC-10376,ServiceNow,2026-04-29 21:26,2026-04-30 00:13,P3,SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,0.28,2.79,1,1,0,4.5,Corporate,2026-04
+INC-10377,ServiceNow,2026-04-12 07:12,2026-04-12 14:49,P2,Autre,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,0.38,7.62,1,1,0,4.5,Belgium,2026-04
+INC-10378,ServiceNow,2026-09-25 03:19,2026-09-25 07:44,P1,Quickdevis,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,0.87,4.42,1,0,0,4.5,France Nord,2026-09
+INC-10379,ServiceNow,2026-07-06 18:57,2026-07-07 00:04,P1,Quickdevis,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,2.8,5.13,0,0,0,3,Corporate,2026-07
+CASE-10380,Salesforce Case,2026-09-17 08:42,2026-09-17 12:06,P3,Salesforce CRM,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,3.12,3.4,1,1,0,3.5,Corporate,2026-09
+INC-10381,ServiceNow,2026-08-31 17:05,2026-09-01 14:01,P3,Interface CRM-SAP,Interface,Resolved,N2,1,1,0,N2,1.86,20.94,1,1,0,5,France Nord,2026-08
+INC-10382,ServiceNow,2026-06-28 21:22,2026-06-30 05:51,P3,Office 365,Incident applicatif,Closed,N2,1,1,0,N2,5.33,32.49,0,1,0,3,France Sud,2026-06
+INC-10383,ServiceNow,2026-05-09 10:57,2026-05-09 18:00,P2,Autre,Demande service,Resolved,Helpdesk,1,0,0,Helpdesk,2.44,7.05,0,1,0,5,France Sud,2026-05
+INC-10384,ServiceNow,2026-07-19 09:58,2026-07-19 15:35,P3,Quickdevis,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,2.12,5.63,1,1,0,4,France Sud,2026-07
+CASE-10385,Salesforce Case,2026-07-20 04:41,2026-07-20 06:04,P4,SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,3.33,1.39,1,1,0,4,Belgium,2026-07
+INC-10386,ServiceNow,2026-07-15 13:19,2026-07-15 14:37,P4,Autre,Formation/usage,Resolved,Helpdesk,1,0,0,Helpdesk,2.77,1.3,1,1,0,4.5,France Sud,2026-07
+INC-10387,ServiceNow,2026-05-30 21:01,2026-05-31 02:51,P3,Interface CRM-SAP,Qualité data,Closed,Helpdesk,1,0,0,Helpdesk,2.2,5.84,1,1,0,5,Corporate,2026-05
+INC-10388,ServiceNow,2026-05-06 05:12,2026-05-06 15:41,P3,Salesforce CRM,Incident applicatif,Closed,N2,1,1,0,N2,4.19,10.49,0,1,0,4,Corporate,2026-05
+INC-10389,ServiceNow,2026-09-24 10:55,2026-09-24 16:49,P2,Interface CRM-SAP,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,2.92,5.9,0,1,0,3,Corporate,2026-09
+CASE-10390,Salesforce Case,2026-07-26 01:56,2026-07-26 08:10,P3,Interface CRM-SAP,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,1.48,6.24,1,1,0,4,Corporate,2026-07
+CASE-10391,Salesforce Case,2026-07-11 09:49,2026-07-11 14:11,P3,Interface CRM-SAP,Incident applicatif,Resolved,Helpdesk,1,0,0,Helpdesk,0.38,4.38,1,1,0,4.5,France Nord,2026-07
+INC-10392,ServiceNow,2026-05-17 18:57,2026-05-17 23:52,P2,Interface CRM-SAP,Incident applicatif,Closed,Helpdesk,1,0,0,Helpdesk,0.79,4.93,1,1,0,4,France Nord,2026-05
+INC-10393,ServiceNow,2026-06-04 10:44,2026-06-05 11:01,P4,Quickdevis,Formation/usage,Resolved,N2,1,1,0,N2,4.38,24.29,1,1,0,5,Corporate,2026-06
+CASE-10394,Salesforce Case,2026-08-19 12:02,2026-08-20 16:38,P4,Office 365,Formation/usage,Closed,N2,1,1,0,N2,1.3,28.61,1,1,0,4.5,Corporate,2026-08
+INC-10395,ServiceNow,2026-06-13 20:11,2026-06-14 00:07,P2,Quickdevis,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,1.04,3.94,1,1,0,3,France Sud,2026-06
+INC-10396,ServiceNow,2026-05-26 18:42,2026-05-26 23:18,P3,Salesforce CRM,Interface,Resolved,Helpdesk,1,0,0,Helpdesk,1.01,4.61,1,1,0,4,France Sud,2026-05
+INC-10397,ServiceNow,2026-05-08 01:41,2026-05-08 04:39,P2,Salesforce CRM,Formation/usage,Closed,Helpdesk,1,0,0,Helpdesk,2.19,2.98,0,1,0,3.5,France Sud,2026-05
+INC-10398,ServiceNow,2026-05-12 21:18,2026-05-13 19:49,P3,Office 365,Interface,Closed,N2,1,1,0,N2,3.0,22.53,1,1,0,3.5,Belgium,2026-05
+INC-10399,ServiceNow,2026-07-04 12:52,2026-07-04 18:34,P3,Office 365,Accès & droits,Resolved,Helpdesk,1,0,0,Helpdesk,0.64,5.71,1,1,0,5,France Sud,2026-07
+INC-10400,ServiceNow,2026-09-04 01:06,2026-09-04 08:36,P4,Office 365,Accès & droits,Closed,Helpdesk,1,0,0,Helpdesk,2.47,7.5,1,1,0,4.5,Belgium,2026-09

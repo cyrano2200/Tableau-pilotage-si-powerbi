@@ -1,0 +1,196 @@
+===============================================================
+EQUANS IT Hubs — Mesures DAX Power BI
+Pilotage SI : Helpdesk / N2 / N3 / Escalades
+===============================================================
+Prérequis modèle :
+  Fact_Tickets_Unified
+  Dim_Priority, Dim_Level, Dim_Source, Dim_Application, Dim_Calendar
+  Relation Fact[CreatedDate].Date -> Dim_Calendar[Date]
+
+
+-- =========================
+-- VOLUMES
+-- =========================
+
+Tickets =
+COUNTROWS ( Fact_Tickets_Unified )
+
+Tickets Helpdesk =
+CALCULATE (
+    COUNTROWS ( Fact_Tickets_Unified ),
+    Fact_Tickets_Unified[HelpdeskTouched] = 1
+)
+
+Tickets N2 =
+CALCULATE (
+    COUNTROWS ( Fact_Tickets_Unified ),
+    Fact_Tickets_Unified[EscalatedToN2] = 1
+)
+
+Tickets N3 =
+CALCULATE (
+    COUNTROWS ( Fact_Tickets_Unified ),
+    Fact_Tickets_Unified[EscalatedToN3] = 1
+)
+
+
+-- =========================
+-- ESCALADES (KPIs pivots)
+-- =========================
+
+Escalade Helpdesk vers N2 % =
+DIVIDE (
+    CALCULATE (
+        COUNTROWS ( Fact_Tickets_Unified ),
+        Fact_Tickets_Unified[EscalatedToN2] = 1
+    ),
+    CALCULATE (
+        COUNTROWS ( Fact_Tickets_Unified ),
+        Fact_Tickets_Unified[HelpdeskTouched] = 1
+    )
+)
+
+Escalade N2 vers N3 % =
+DIVIDE (
+    CALCULATE (
+        COUNTROWS ( Fact_Tickets_Unified ),
+        Fact_Tickets_Unified[EscalatedToN3] = 1
+    ),
+    CALCULATE (
+        COUNTROWS ( Fact_Tickets_Unified ),
+        Fact_Tickets_Unified[EscalatedToN2] = 1
+    )
+)
+
+-- Cibles (constantes paramétrables)
+Cible Escalade Helpdesk N2 = 0.30
+Cible Escalade N2 N3 = 0.20
+
+Ecart Escalade Helpdesk N2 =
+[Escalade Helpdesk vers N2 %] - [Cible Escalade Helpdesk N2]
+
+Ecart Escalade N2 N3 =
+[Escalade N2 vers N3 %] - [Cible Escalade N2 N3]
+
+Statut Escalade Helpdesk N2 =
+VAR v = [Escalade Helpdesk vers N2 %]
+RETURN
+    SWITCH (
+        TRUE (),
+        v <= 0.25, "Vert",
+        v <= 0.35, "Orange",
+        "Rouge"
+    )
+
+Statut Escalade N2 N3 =
+VAR v = [Escalade N2 vers N3 %]
+RETURN
+    SWITCH (
+        TRUE (),
+        v <= 0.15, "Vert",
+        v <= 0.25, "Orange",
+        "Rouge"
+    )
+
+
+-- =========================
+-- SLA / QUALITE DE SERVICE
+-- =========================
+
+SLA Premiere Reponse % =
+AVERAGE ( Fact_Tickets_Unified[SLA_FirstResponse_OK] )
+
+SLA Resolution % =
+AVERAGE ( Fact_Tickets_Unified[SLA_Resolution_OK] )
+
+SLA Resolution Helpdesk % =
+CALCULATE (
+    [SLA Resolution %],
+    Fact_Tickets_Unified[ResolvedLevel] = "Helpdesk"
+)
+
+SLA Resolution N2 % =
+CALCULATE (
+    [SLA Resolution %],
+    Fact_Tickets_Unified[ResolvedLevel] = "N2"
+)
+
+SLA Resolution N3 % =
+CALCULATE (
+    [SLA Resolution %],
+    Fact_Tickets_Unified[ResolvedLevel] = "N3"
+)
+
+Delai Moyen Premiere Reponse h =
+AVERAGE ( Fact_Tickets_Unified[FirstResponseHours] )
+
+Delai Moyen Resolution h =
+AVERAGE ( Fact_Tickets_Unified[ResolutionHours] )
+
+
+-- =========================
+-- RESOLUTION PAR NIVEAU
+-- =========================
+
+Taux Resolution Helpdesk % =
+DIVIDE (
+    CALCULATE (
+        COUNTROWS ( Fact_Tickets_Unified ),
+        Fact_Tickets_Unified[ResolvedLevel] = "Helpdesk"
+    ),
+    [Tickets Helpdesk]
+)
+
+Taux Resolution au N2 % =
+DIVIDE (
+    CALCULATE (
+        COUNTROWS ( Fact_Tickets_Unified ),
+        Fact_Tickets_Unified[ResolvedLevel] = "N2"
+    ),
+    [Tickets N2]
+)
+
+Taux Resolution au N3 % =
+DIVIDE (
+    CALCULATE (
+        COUNTROWS ( Fact_Tickets_Unified ),
+        Fact_Tickets_Unified[ResolvedLevel] = "N3"
+    ),
+    [Tickets N3]
+)
+
+Taux Reouverture % =
+AVERAGE ( Fact_Tickets_Unified[Reopened] )
+
+CSAT Moyen =
+AVERAGE ( Fact_Tickets_Unified[CSAT] )
+
+
+-- =========================
+-- STRATEGIQUE / TENDANCES
+-- =========================
+
+Tickets Mois Precedent =
+CALCULATE (
+    [Tickets],
+    DATEADD ( Dim_Calendar[Date], -1, MONTH )
+)
+
+Evolution Volume % =
+DIVIDE ( [Tickets] - [Tickets Mois Precedent], [Tickets Mois Precedent] )
+
+Backlog Proxy Ouverts =
+-- Si vous ajoutez un champ Status actif :
+CALCULATE (
+    COUNTROWS ( Fact_Tickets_Unified ),
+    Fact_Tickets_Unified[Status] IN { "New", "In Progress", "Waiting Vendor" }
+)
+
+
+-- =========================
+-- FORMATS RECOMMANDES
+-- =========================
+-- Escalade* / SLA* / Taux*  -> % 0.0
+-- Delai*                    -> nombre 0.0
+-- CSAT Moyen                -> nombre 0.00
+-- Tickets*                  -> entier
