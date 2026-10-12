@@ -1,4 +1,4 @@
-# Equans IT Hubs — Tableau de Pilotage SI
+# Tableau de Pilotage SI
 
 **Helpdesk N1 · Support N2 · Expertise N3**  
 Dashboard de pilotage SI (escalades, SLA, funnel) — données kit démo ServiceNow + Salesforce.
