@@ -1,0 +1,200 @@
+table Fact_Tickets_Unified
+	lineageTag: 064ea4db-9fa5-4d6f-b4bf-d6710121cb03
+
+
+	measure Tickets = COUNTROWS ( Fact_Tickets_Unified )
+		formatString: #,0
+
+	measure 'Tickets Helpdesk' =
+			CALCULATE (
+			    COUNTROWS ( Fact_Tickets_Unified ),
+			    Fact_Tickets_Unified[HelpdeskTouched] = 1
+			)
+		formatString: #,0
+
+	measure 'Tickets N2' =
+			CALCULATE (
+			    COUNTROWS ( Fact_Tickets_Unified ),
+			    Fact_Tickets_Unified[EscalatedToN2] = 1
+			)
+		formatString: #,0
+
+	measure 'Tickets N3' =
+			CALCULATE (
+			    COUNTROWS ( Fact_Tickets_Unified ),
+			    Fact_Tickets_Unified[EscalatedToN3] = 1
+			)
+		formatString: #,0
+
+	measure 'Escalade Helpdesk vers N2 %' =
+			DIVIDE (
+			    CALCULATE ( COUNTROWS ( Fact_Tickets_Unified ), Fact_Tickets_Unified[EscalatedToN2] = 1 ),
+			    CALCULATE ( COUNTROWS ( Fact_Tickets_Unified ), Fact_Tickets_Unified[HelpdeskTouched] = 1 )
+			)
+		formatString: 0.0%
+
+	measure 'Escalade N2 vers N3 %' =
+			DIVIDE (
+			    CALCULATE ( COUNTROWS ( Fact_Tickets_Unified ), Fact_Tickets_Unified[EscalatedToN3] = 1 ),
+			    CALCULATE ( COUNTROWS ( Fact_Tickets_Unified ), Fact_Tickets_Unified[EscalatedToN2] = 1 )
+			)
+		formatString: 0.0%
+
+	measure 'SLA Resolution %' = AVERAGE ( Fact_Tickets_Unified[SLA_Resolution_OK] )
+		formatString: 0.0%
+
+	measure 'SLA Premiere Reponse %' = AVERAGE ( Fact_Tickets_Unified[SLA_FirstResponse_OK] )
+		formatString: 0.0%
+
+	measure 'SLA Resolution Helpdesk %' =
+			CALCULATE ( [SLA Resolution %], Fact_Tickets_Unified[ResolvedLevel] = "Helpdesk" )
+		formatString: 0.0%
+
+	measure 'SLA Resolution N2 %' =
+			CALCULATE ( [SLA Resolution %], Fact_Tickets_Unified[ResolvedLevel] = "N2" )
+		formatString: 0.0%
+
+	measure 'SLA Resolution N3 %' =
+			CALCULATE ( [SLA Resolution %], Fact_Tickets_Unified[ResolvedLevel] = "N3" )
+		formatString: 0.0%
+
+	measure 'Taux Reouverture %' = AVERAGE ( Fact_Tickets_Unified[Reopened] )
+		formatString: 0.0%
+
+	measure 'CSAT Moyen' = AVERAGE ( Fact_Tickets_Unified[CSAT] )
+		formatString: 0.00
+
+	measure 'Cible Escalade Helpdesk N2' = 0.30
+		formatString: 0.0%
+
+	measure 'Cible Escalade N2 N3' = 0.20
+		formatString: 0.0%
+
+	measure 'Taux Escalade Global %' =
+			DIVIDE (
+			    CALCULATE ( COUNTROWS ( Fact_Tickets_Unified ), Fact_Tickets_Unified[EscalatedToN2] = 1 ),
+			    [Tickets]
+			)
+		formatString: 0.0%
+
+	column TicketID
+		dataType: string
+		summarizeBy: none
+
+	column SourceSystem
+		dataType: string
+		summarizeBy: none
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: Short Date
+		summarizeBy: none
+
+	column ClosedDate
+		dataType: dateTime
+		formatString: Short Date
+		summarizeBy: none
+
+	column Priority
+		dataType: string
+		summarizeBy: none
+
+	column Application
+		dataType: string
+		summarizeBy: none
+
+	column Category
+		dataType: string
+		summarizeBy: none
+
+	column Status
+		dataType: string
+		summarizeBy: none
+
+	column AssignmentLevel
+		dataType: string
+		summarizeBy: none
+
+	column HelpdeskTouched
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column EscalatedToN2
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column EscalatedToN3
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column ResolvedLevel
+		dataType: string
+		summarizeBy: none
+
+	column FirstResponseHours
+		dataType: double
+		formatString: 0.00
+		summarizeBy: sum
+
+	column ResolutionHours
+		dataType: double
+		formatString: 0.00
+		summarizeBy: sum
+
+	column SLA_FirstResponse_OK
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column SLA_Resolution_OK
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column Reopened
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column CSAT
+		dataType: double
+		formatString: 0.00
+		summarizeBy: sum
+
+	column BusinessUnit
+		dataType: string
+		summarizeBy: none
+
+	column Month
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column CreatedDateOnly
+		dataType: dateTime
+		formatString: Short Date
+		summarizeBy: none
+
+
+	partition Fact_Tickets_Unified = m
+		mode: import
+		source =
+			```
+let
+    Source = Csv.Document(File.Contents(DataFolder & "Fact_Tickets_Unified.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    Types = Table.TransformColumnTypes(Promoted, {
+        {"TicketID", type text}, {"SourceSystem", type text}, {"CreatedDate", type datetime}, {"ClosedDate", type datetime},
+        {"Priority", type text}, {"Application", type text}, {"Category", type text}, {"Status", type text},
+        {"AssignmentLevel", type text}, {"HelpdeskTouched", Int64.Type}, {"EscalatedToN2", Int64.Type}, {"EscalatedToN3", Int64.Type},
+        {"ResolvedLevel", type text}, {"FirstResponseHours", type number}, {"ResolutionHours", type number},
+        {"SLA_FirstResponse_OK", Int64.Type}, {"SLA_Resolution_OK", Int64.Type}, {"Reopened", Int64.Type},
+        {"CSAT", type number}, {"BusinessUnit", type text}, {"Month", type text}
+    }),
+    AddDate = Table.AddColumn(Types, "CreatedDateOnly", each Date.From([CreatedDate]), type date)
+in
+    AddDate
+			```

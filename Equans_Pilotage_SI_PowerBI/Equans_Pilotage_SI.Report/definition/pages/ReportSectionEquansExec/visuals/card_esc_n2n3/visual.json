@@ -1,0 +1,51 @@
+{
+  "name": "card_esc_n2n3",
+  "position": {
+    "x": 980,
+    "y": 40,
+    "z": 1000,
+    "width": 240,
+    "height": 120,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Tickets_Unified"
+                    }
+                  },
+                  "Property": "Escalade N2 vers N3 %"
+                }
+              },
+              "queryRef": "Fact_Tickets_Unified.Escalade N2 vers N3 %",
+              "nativeQueryRef": "Escalade N2 vers N3 %"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Escalade N2 \u2192 N3'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "card_n2",
+  "position": {
+    "x": 980,
+    "y": 200,
+    "z": 1000,
+    "width": 240,
+    "height": 120,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Tickets_Unified"
+                    }
+                  },
+                  "Property": "Tickets N2"
+                }
+              },
+              "queryRef": "Fact_Tickets_Unified.Tickets N2",
+              "nativeQueryRef": "Tickets N2"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tickets escalad\u00e9s N2'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

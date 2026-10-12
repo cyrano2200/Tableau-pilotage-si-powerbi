@@ -1,0 +1,47 @@
+table Dim_Calendar
+	lineageTag: 3d16475b-bb11-4aad-8c59-57d0c729f003
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		summarizeBy: none
+
+	column Year
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column Month
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column MonthName
+		dataType: string
+		summarizeBy: none
+
+	column YearMonth
+		dataType: string
+		summarizeBy: none
+
+	column Week
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column IsWorkday
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+
+	partition Dim_Calendar = m
+		mode: import
+		source =
+			```
+let
+    Source = Csv.Document(File.Contents(DataFolder & "Dim_Calendar.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+in
+    Promoted
+			```

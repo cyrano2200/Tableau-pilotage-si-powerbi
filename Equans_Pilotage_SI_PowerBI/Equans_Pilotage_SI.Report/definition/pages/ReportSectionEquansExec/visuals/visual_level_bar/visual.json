@@ -1,0 +1,70 @@
+{
+  "name": "visual_level_bar",
+  "position": {
+    "x": 40,
+    "y": 360,
+    "z": 2000,
+    "width": 600,
+    "height": 320,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Level"
+                    }
+                  },
+                  "Property": "LevelName"
+                }
+              },
+              "queryRef": "Dim_Level.LevelName",
+              "nativeQueryRef": "LevelName",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Tickets_Unified"
+                    }
+                  },
+                  "Property": "Tickets"
+                }
+              },
+              "queryRef": "Fact_Tickets_Unified.Tickets",
+              "nativeQueryRef": "Tickets"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Funnel / Volume par niveau'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DataFolder","Fact_Tickets_Unified","Dim_Priority","Dim_Level","Dim_Source","Dim_Application","Dim_Calendar"]
+
+ref table Fact_Tickets_Unified
+ref table Dim_Priority
+ref table Dim_Level
+ref table Dim_Source
+ref table Dim_Application
+ref table Dim_Calendar
+ref cultureInfo fr-FR

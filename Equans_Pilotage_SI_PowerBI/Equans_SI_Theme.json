@@ -1,0 +1,39 @@
+{
+  "name": "Equans SI Pilotage",
+  "dataColors": [
+    "#2E9B5A",
+    "#E89A2C",
+    "#D94A4A",
+    "#2F6FED",
+    "#1A3A5C",
+    "#00A1E0",
+    "#6B7280",
+    "#81B5A1"
+  ],
+  "background": "#F4F6F8",
+  "foreground": "#1F2933",
+  "tableAccent": "#2F6FED",
+  "good": "#2E9B5A",
+  "neutral": "#E89A2C",
+  "bad": "#D94A4A",
+  "maximum": "#2F6FED",
+  "center": "#E89A2C",
+  "minimum": "#D94A4A",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#1F2933"
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#6B7280"
+    },
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 22,
+      "color": "#1F2933"
+    }
+  }
+}

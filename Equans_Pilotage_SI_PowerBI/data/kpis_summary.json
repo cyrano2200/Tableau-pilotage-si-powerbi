@@ -1,0 +1,70 @@
+{
+  "volume": 400,
+  "esc_n1_n2": 28.7,
+  "esc_n2_n3": 19.1,
+  "esc_global": 28.7,
+  "sla_global": 91.0,
+  "sla_first": 77.5,
+  "reopen": 2.0,
+  "csat": 4.15,
+  "n1_resolved": 285,
+  "n2_resolved": 93,
+  "n3_resolved": 22,
+  "esc_n2_count": 115,
+  "esc_n3_count": 22,
+  "sla_helpdesk": 97.2,
+  "sla_n2": 82.8,
+  "sla_n3": 45.5,
+  "months": [
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09"
+  ],
+  "volume_by_month": [
+    53,
+    72,
+    66,
+    79,
+    65,
+    65
+  ],
+  "apps": [
+    "Quickdevis",
+    "Autre",
+    "Salesforce CRM",
+    "SAP",
+    "Office 365",
+    "Interface CRM-SAP"
+  ],
+  "app_counts": [
+    65,
+    61,
+    62,
+    82,
+    60,
+    70
+  ],
+  "priorities": [
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "prio_counts": [
+    16,
+    76,
+    189,
+    119
+  ],
+  "sources": [
+    "ServiceNow",
+    "Salesforce Case"
+  ],
+  "src_counts": [
+    312,
+    88
+  ]
+}

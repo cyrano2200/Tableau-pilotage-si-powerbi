@@ -1,0 +1,51 @@
+{
+  "name": "card_esc_n1n2",
+  "position": {
+    "x": 720,
+    "y": 40,
+    "z": 1000,
+    "width": 240,
+    "height": 120,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Tickets_Unified"
+                    }
+                  },
+                  "Property": "Escalade Helpdesk vers N2 %"
+                }
+              },
+              "queryRef": "Fact_Tickets_Unified.Escalade Helpdesk vers N2 %",
+              "nativeQueryRef": "Escalade Helpdesk vers N2 %"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Escalade Helpdesk \u2192 N2'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

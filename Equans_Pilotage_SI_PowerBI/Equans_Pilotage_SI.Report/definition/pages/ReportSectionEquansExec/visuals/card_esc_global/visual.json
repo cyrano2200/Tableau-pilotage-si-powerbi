@@ -1,0 +1,51 @@
+{
+  "name": "card_esc_global",
+  "position": {
+    "x": 480,
+    "y": 40,
+    "z": 1000,
+    "width": 220,
+    "height": 120,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Tickets_Unified"
+                    }
+                  },
+                  "Property": "Taux Escalade Global %"
+                }
+              },
+              "queryRef": "Fact_Tickets_Unified.Taux Escalade Global %",
+              "nativeQueryRef": "Taux Escalade Global %"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Taux d'Escalade Global'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

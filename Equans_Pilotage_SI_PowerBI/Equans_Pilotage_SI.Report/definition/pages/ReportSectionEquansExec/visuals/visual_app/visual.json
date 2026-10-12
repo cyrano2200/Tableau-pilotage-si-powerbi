@@ -1,0 +1,70 @@
+{
+  "name": "visual_app",
+  "position": {
+    "x": 660,
+    "y": 360,
+    "z": 2001,
+    "width": 560,
+    "height": 320,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Tickets_Unified"
+                    }
+                  },
+                  "Property": "Application"
+                }
+              },
+              "queryRef": "Fact_Tickets_Unified.Application",
+              "nativeQueryRef": "Application",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Tickets_Unified"
+                    }
+                  },
+                  "Property": "Tickets"
+                }
+              },
+              "queryRef": "Fact_Tickets_Unified.Tickets",
+              "nativeQueryRef": "Tickets"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tickets par application'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

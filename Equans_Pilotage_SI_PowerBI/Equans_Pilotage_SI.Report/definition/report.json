@@ -1,0 +1,24 @@
+{
+  "layoutOptimization": "None",
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "Allow",
+    "defaultFilterActionIsDataFilter": true
+  }
+}

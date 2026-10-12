@@ -1,0 +1,26 @@
+table Dim_Application
+	lineageTag: da4be3ac-9adf-4efc-9ae8-200987f11dc0
+
+	column AppKey
+		dataType: string
+		summarizeBy: none
+
+	column Application
+		dataType: string
+		summarizeBy: none
+
+	column Owner
+		dataType: string
+		summarizeBy: none
+
+
+	partition Dim_Application = m
+		mode: import
+		source =
+			```
+let
+    Source = Csv.Document(File.Contents(DataFolder & "Dim_Application.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+in
+    Promoted
+			```

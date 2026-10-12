@@ -1,0 +1,27 @@
+table Dim_Level
+	lineageTag: 9aa9213b-a62a-4e2a-ab3d-e7b9fd5dc6d0
+
+	column LevelKey
+		dataType: string
+		summarizeBy: none
+
+	column LevelName
+		dataType: string
+		summarizeBy: none
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+
+	partition Dim_Level = m
+		mode: import
+		source =
+			```
+let
+    Source = Csv.Document(File.Contents(DataFolder & "Dim_Level.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+in
+    Promoted
+			```

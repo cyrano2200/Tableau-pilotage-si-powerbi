@@ -1,0 +1,32 @@
+table Dim_Priority
+	lineageTag: d1277748-f447-4076-b674-6755130c88e4
+
+	column PriorityKey
+		dataType: string
+		summarizeBy: none
+
+	column Priority
+		dataType: string
+		summarizeBy: none
+
+	column SLA_FirstResp_Hours
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+	column SLA_Resolve_Hours
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+
+
+	partition Dim_Priority = m
+		mode: import
+		source =
+			```
+let
+    Source = Csv.Document(File.Contents(DataFolder & "Dim_Priority.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+in
+    Promoted
+			```

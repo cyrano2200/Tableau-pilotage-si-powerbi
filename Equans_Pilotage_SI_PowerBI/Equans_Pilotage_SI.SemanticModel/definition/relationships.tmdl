@@ -1,0 +1,19 @@
+relationship Rel_Priority
+	fromColumn: Fact_Tickets_Unified.Priority
+	toColumn: Dim_Priority.Priority
+
+relationship Rel_Level
+	fromColumn: Fact_Tickets_Unified.ResolvedLevel
+	toColumn: Dim_Level.LevelKey
+
+relationship Rel_Source
+	fromColumn: Fact_Tickets_Unified.SourceSystem
+	toColumn: Dim_Source.SourceKey
+
+relationship Rel_Application
+	fromColumn: Fact_Tickets_Unified.Application
+	toColumn: Dim_Application.Application
+
+relationship Rel_Calendar
+	fromColumn: Fact_Tickets_Unified.CreatedDateOnly
+	toColumn: Dim_Calendar.Date

@@ -1,0 +1,51 @@
+{
+  "name": "card_sla_hd",
+  "position": {
+    "x": 260,
+    "y": 200,
+    "z": 1000,
+    "width": 200,
+    "height": 120,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Tickets_Unified"
+                    }
+                  },
+                  "Property": "SLA Resolution Helpdesk %"
+                }
+              },
+              "queryRef": "Fact_Tickets_Unified.SLA Resolution Helpdesk %",
+              "nativeQueryRef": "SLA Resolution Helpdesk %"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'SLA Helpdesk'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
