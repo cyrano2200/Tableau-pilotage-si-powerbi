@@ -5,7 +5,7 @@ Dashboard de pilotage SI (escalades, SLA, funnel) — données kit démo Service
 
 ## Démo en ligne (GitHub Pages)
 
-**https://cyrano2200.github.io/equans-pilotage-si-powerbi/**
+**https://cyrano2200.github.io/Tableau-pilotage-si-powerbi/**
 
 ## Ouvrir dans Codespaces
 
