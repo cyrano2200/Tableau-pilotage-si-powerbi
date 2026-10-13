@@ -16,6 +16,7 @@ Ce document explique **quelles applications utiliser**, **comment les relier**, 
 | **Team** | Tickets traités par département, équipe, TL, agent | Tickets + référentiel org |
 | **Live** | Appels (entrants, attente, répondus, perdus, ASA) + **double écoute** + **chat coach** | Téléphonie / CTI + Teams (chat) |
 | **BO** | Backoffice : tickets traités **par département** et **par agent** (clos / en cours / attente, SLA, CSAT) | Fact_Tickets + Dim_Org |
+| **Plan** | Planning par équipe : shifts, congés, formations, couverture journalière | Planning RH / Teams Shifts / Excel |
 
 ### Départements & équipes du modèle
 
@@ -378,3 +379,20 @@ Onglet **BO** du dashboard :
 Utilisation PM : contrôler la charge backoffice, comparer les départements, identifier les agents en surcharge ou sous SLA, puis drill-down vers un agent (filtre global).
 
 En production Power BI : page « Backoffice » avec matrices `Department × Status` et `Agent × Status`, mêmes mesures DAX.
+
+---
+
+## 17. Planning par équipe
+
+Onglet **Plan** :
+
+| Élément | Contenu |
+|---------|---------|
+| Grille semaine | Lun→Dim pour Directeur, Responsables, Team Leaders, Agents |
+| Shifts | Matin / Après-midi / Soir / Standard |
+| Exceptions | Congé, Formation, Off (week-end) |
+| KPIs | Effectif affiché, équipes, présents moyens, congés, formations |
+| Couverture | Graphique des présents par jour |
+| Filtres | Département / équipe / TL / agent (mêmes filtres PM) |
+
+En production : brancher **Teams Shifts**, **Workforce Management** (Genesys/Nice) ou un Excel SharePoint `Fact_Planning` (`PersonId`, `Date`, `ShiftCode`, `Hours`).

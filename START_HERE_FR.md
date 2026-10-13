@@ -8,7 +8,7 @@
 ### Option A — Voir le dashboard tout de suite (sans Power BI)
 1. Ouvrez **`index.html`** (ou `Equans_SI_Dashboard_FINAL.html`)
 2. Ou la démo en ligne : https://cyrano2200.github.io/Tableau-pilotage-si-powerbi/
-3. Naviguez : **KPI · Org · Team · Live · BO** (appels, double écoute Silence/Whisper/Barge, chat coach Agent/TL)
+3. Naviguez : **KPI · Org · Team · Live · BO · Plan** (appels, double écoute Silence/Whisper/Barge, chat coach Agent/TL)
 
 ### Option B — Produit Power BI Desktop (recommandé pour le mémoire / Equans)
 1. Installez **Power BI Desktop** (gratuit) : https://powerbi.microsoft.com/desktop/
