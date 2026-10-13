@@ -40,7 +40,7 @@ Ce guide explique :
 - **Team** — tickets par équipe, team leader et agent
 - **Live** — appels temps réel + **double écoute** + **chat coach** (Agent / Team Leader)
 - **BO** — backoffice : tickets traités par département et par agent
-- **Plan** — planning par équipe (shifts, congés, formations, couverture)
+- **Plan** — planning par équipe (tous) + pauses 15 min / 1 h / 15 min
 
 Les filtres (département, équipe, TL, agent) changent **toutes** les vues.
 
