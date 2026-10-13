@@ -62,7 +62,7 @@ Ou : bouton **Code** → **Codespaces** → **Create codespace on main**.
 | `docs/` | Maquettes + guides |
 | `START_HERE_FR.md` | Démarrage rapide |
 | `BUILD_POWERBI_STEPS.md` | Build projet Power BI |
-| `Equans_Pilotage_SI_PowerBI/` | Projet Power BI Desktop (.pbip) |
+| `Tableau_Pilotage_SI_PowerBI/` | Projet Power BI Desktop (.pbip) |
 
 ## Power BI Desktop (rapide)
 

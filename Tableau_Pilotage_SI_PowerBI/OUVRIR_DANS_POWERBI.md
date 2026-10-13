@@ -6,7 +6,7 @@
    **`Equans_Pilotage_SI.pbip`**
 3. Power BI demande parfois de **mettre à jour / actualiser** les données :
    - Paramètre `DataFolder` = chemin du dossier `data\` de ce projet  
-     Exemple : `C:\Users\lenovo\Desktop\kit power bi equans\Equans_Pilotage_SI_PowerBI\data\`
+     Exemple : `C:\Users\lenovo\Desktop\kit power bi equans\Tableau_Pilotage_SI_PowerBI\data\`
    - Puis **Accueil → Actualiser**
 4. Vous obtenez la page **Pilotage SI - Executive** avec :
    - Volume, SLA, escalades Helpdesk→N2 / N2→N3

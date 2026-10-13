@@ -260,7 +260,7 @@ Le filtre département limite la liste des destinataires.
 ## 9. Déployer Power BI (pas à pas)
 
 1. Installer **Power BI Desktop**.
-2. Ouvrir `Equans_Pilotage_SI_PowerBI/` ou importer `data/*`.
+2. Ouvrir `Tableau_Pilotage_SI_PowerBI/` ou importer `data/*`.
 3. Coller `dax/Mesures_DAX.txt`.
 4. Créer les pages :
    - Pilotage KPI  
@@ -343,7 +343,7 @@ Maquettes : `docs/dashboard_powerbi_style_helpdesk.png`, `docs/architecture_powe
 | `powerquery/*.pq` | Extraction SNOW / SF / union |
 | `dax/Mesures_DAX.txt` | KPIs escalade & SLA |
 | `data/` | CSV / Excel démo |
-| `Equans_Pilotage_SI_PowerBI/` | Projet Power BI |
+| `Tableau_Pilotage_SI_PowerBI/` | Projet Power BI |
 | `START_HERE_FR.md` | Démarrage rapide |
 | `BUILD_POWERBI_STEPS.md` | Build .pbip |
 | `README.md` | Présentation du dépôt |

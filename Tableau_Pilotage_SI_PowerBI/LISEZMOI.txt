@@ -2,14 +2,14 @@ EQUANS — TABLEAU DE PILOTAGE SI (POWER BI)
 ==========================================
 
 1) Décompressez ce dossier sur votre PC, par ex. :
-   C:\Users\lenovo\Desktop\kit power bi equans\Equans_Pilotage_SI_PowerBI
+   C:\Users\lenovo\Desktop\kit power bi equans\Tableau_Pilotage_SI_PowerBI
 
 2) Double-cliquez : Equans_Pilotage_SI.pbip
    (ouvre Power BI Desktop)
 
 3) Si Power BI demande le paramètre DataFolder, collez le chemin COMPLET
    du dossier data\ (avec le \ final), exemple :
-   C:\Users\lenovo\Desktop\kit power bi equans\Equans_Pilotage_SI_PowerBI\data\
+   C:\Users\lenovo\Desktop\kit power bi equans\Tableau_Pilotage_SI_PowerBI\data\
 
 4) Accueil → Actualiser
 
