@@ -15,6 +15,7 @@ Ce document explique **quelles applications utiliser**, **comment les relier**, 
 | **Org** | Organigramme cliquable : Directeur → Responsables → Team Leaders → Agents | RH / Entra ID / Excel référentiel |
 | **Team** | Tickets traités par département, équipe, TL, agent | Tickets + référentiel org |
 | **Live** | Appels (entrants, attente, répondus, perdus, ASA) + **double écoute** + **chat coach** | Téléphonie / CTI + Teams (chat) |
+| **BO** | Backoffice : tickets traités **par département** et **par agent** (clos / en cours / attente, SLA, CSAT) | Fact_Tickets + Dim_Org |
 
 ### Départements & équipes du modèle
 
@@ -359,3 +360,20 @@ Maquettes : `docs/dashboard_powerbi_style_helpdesk.png`, `docs/architecture_powe
 
 *Master PSI — BAHJI Mohammed — Tableau de pilotage SI*  
 *Dernière mise à jour : double écoute (Silence / Whisper / Barge) + chat coach Agent / Team Leader*
+
+---
+
+## 16. Backoffice (visibilité tickets)
+
+Onglet **BO** du dashboard :
+
+| Bloc | Contenu |
+|------|---------|
+| KPIs | Volume filtré, Clos, En cours, En attente, Agents actifs, SLA |
+| Par département | Cartes + graphique — clic pour zoomer sur un département |
+| Par agent | Traités, Clos, En cours, Attente, SLA, CSAT, Esc N2/N3 |
+| Détail | Liste des tickets du périmètre (max. 100 en démo) |
+
+Utilisation PM : contrôler la charge backoffice, comparer les départements, identifier les agents en surcharge ou sous SLA, puis drill-down vers un agent (filtre global).
+
+En production Power BI : page « Backoffice » avec matrices `Department × Status` et `Agent × Status`, mêmes mesures DAX.

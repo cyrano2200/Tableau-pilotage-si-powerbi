@@ -140,6 +140,21 @@ body { font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); colo
 .toast.show { opacity:1; transform:translateY(0); }
 @media (max-width: 900px) { .coach-grid { grid-template-columns:1fr; } }
 
+
+/* Backoffice */
+.bo-kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+.bo-split { display:grid; grid-template-columns:1fr 1.2fr; gap:12px; }
+.bo-dept-card { border:1px solid #E5E7EB; border-radius:10px; padding:10px; cursor:pointer; background:#fff; transition:.15s; }
+.bo-dept-card:hover { border-color:#2F6FED; box-shadow:0 2px 8px rgba(47,111,237,.12); }
+.bo-dept-card.active { outline:2px solid #2F6FED; background:#EFF6FF; }
+.bo-dept-card .dn { font-weight:800; font-size:13px; }
+.bo-dept-card .dv { font-size:22px; font-weight:800; margin:4px 0; }
+.bo-dept-card .ds { font-size:10px; color:var(--gray); }
+.progress { height:8px; background:#E5E7EB; border-radius:999px; overflow:hidden; margin-top:6px; }
+.progress > i { display:block; height:100%; background:#2F6FED; }
+.status-pill { display:inline-block; padding:2px 6px; border-radius:999px; font-size:10px; font-weight:700; color:#fff; }
+@media (max-width: 1100px) { .bo-kpis, .bo-split { grid-template-columns:1fr; } }
+
 </style>
 </head>
 <body>
@@ -149,6 +164,7 @@ body { font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); colo
     <button class="nav-btn" data-view="org" title="Organigramme"><span class="ic">◎</span>Org</button>
     <button class="nav-btn" data-view="equipes" title="Équipes"><span class="ic">▤</span>Team</button>
     <button class="nav-btn" data-view="appels" title="Appels temps réel"><span class="ic">☎</span>Live</button>
+    <button class="nav-btn" data-view="backoffice" title="Backoffice"><span class="ic">☰</span>BO</button>
   </aside>
   <div class="main">
     <header class="header">
@@ -360,6 +376,52 @@ body { font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); colo
         </div>
       </section>
 
+
+      <section class="view" id="view-backoffice">
+        <div class="card">
+          <h2>Backoffice — Tickets traités <span class="hint">Visibilité par département et par agent · filtres PM appliqués</span></h2>
+          <div class="bo-kpis" id="boKpis"></div>
+        </div>
+        <div class="bo-split">
+          <div class="card">
+            <h2>Par département <span class="hint">Cliquez pour filtrer les agents</span></h2>
+            <div id="boDeptList" style="display:flex;flex-direction:column;gap:8px"></div>
+            <canvas id="chartBoDept" height="160" style="margin-top:12px"></canvas>
+          </div>
+          <div class="card" style="overflow:auto;max-height:520px">
+            <h2>Par agent <span class="hint" id="boAgentScope">Tous départements</span></h2>
+            <table class="table" id="boAgentTable">
+              <thead>
+                <tr>
+                  <th>Agent</th><th>Département</th><th>Équipe</th><th>Team Leader</th>
+                  <th>Traités</th><th>Clos</th><th>En cours</th><th>Attente</th>
+                  <th>SLA</th><th>CSAT</th><th>Esc N2</th><th>Esc N3</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row row-2">
+          <div class="card">
+            <h2>Répartition statuts (périmètre)</h2>
+            <canvas id="chartBoStatus" height="150"></canvas>
+          </div>
+          <div class="card" style="overflow:auto;max-height:320px">
+            <h2>Tickets du backoffice <span class="hint" id="boTicketCount">—</span></h2>
+            <table class="table" id="boTicketTable">
+              <thead>
+                <tr>
+                  <th>Ticket</th><th>Dépt</th><th>Agent</th><th>Équipe</th>
+                  <th>Application</th><th>Niveau</th><th>Statut</th><th>SLA</th><th>Mois</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <div class="toast" id="toast"></div>
       <div class="footer">Tableau de pilotage SI · SAP / PDT / Packaging / Salesforce / Helpdesk / N2 / N3 / Éditeurs · ServiceNow + Salesforce (démo) · Master PSI — BAHJI Mohammed</div>
     </div>
@@ -371,7 +433,8 @@ const TICKETS = [{"TicketID": "INC-30001", "Source": "ServiceNow", "Priority": "
 const PEOPLE = [];
 const CALL_REASONS = ["Mot de passe", "Accès SAP", "Salesforce Case", "Installation package", "Imprimante", "VPN", "Licence Office", "Escalade N2", "Escalade N3", "Incident Éditeur", "Erreur FI", "Déploiement SCCM", "Poste lent", "Demande matériel"];
 
-let g1,g2,cMonth,cApp,cAgents,cCalls,cReasons;
+let g1,g2,cMonth,cApp,cAgents,cCalls,cReasons,cBoDept,cBoStatus;
+let boDeptFocus = "";
 let selectedOrg = { type:'all', id:null, label:'Périmètre global' };
 let callState = { incoming:0, waiting:0, talking:0, answered:0, lost:0, asaSum:0, asaN:0, reasons:{}, log:[], agentMap:{} };
 
@@ -797,16 +860,116 @@ function renderChatLog(){
   </div>`).join('') || '<div class="hint">Aucun chat envoyé pour le moment</div>';
 }
 
+
+function renderBackoffice(rows){
+  const depts = [...new Set(ORG.departments.map(d=>d.name))];
+  // If focus set, agent/tables use focused dept; KPIs use full filtered rows
+  const focusRows = boDeptFocus ? rows.filter(r=>r.Department===boDeptFocus || r.DeptId===boDeptFocus) : rows;
+  const clos = rows.filter(r=>r.Status==='Clos').length;
+  const encours = rows.filter(r=>r.Status==='En cours').length;
+  const attente = rows.filter(r=>r.Status==='En attente').length;
+  const sla = rows.length ? Math.round(1000*rows.filter(r=>r.SLA==='OK').length/rows.length)/10 : 0;
+  const agentsN = new Set(rows.map(r=>r.AgentId)).size;
+  document.getElementById('boKpis').innerHTML = [
+    ['Tickets (filtre)', rows.length, ''],
+    ['Clos', clos, '#2E9B5A'],
+    ['En cours', encours, '#E89A2C'],
+    ['En attente', attente, '#D94A4A'],
+    ['Agents actifs', agentsN, '#2F6FED']
+  ].map(([l,v,c])=>`<div class="kpi"><div class="label">${l}</div><div class="value" style="${c?'color:'+c:''}">${v}</div><div class="hint">SLA global ${sla}%</div></div>`).join('');
+
+  const maxD = Math.max(1, ...depts.map(d=>rows.filter(r=>r.Department===d).length));
+  document.getElementById('boDeptList').innerHTML = depts.map(d=>{
+    const rr = rows.filter(r=>r.Department===d);
+    const dep = ORG.departments.find(x=>x.name===d);
+    const pct = Math.round(100*rr.length/maxD);
+    const slaD = rr.length? Math.round(1000*rr.filter(r=>r.SLA==='OK').length/rr.length)/10 : 0;
+    const active = (boDeptFocus===d || boDeptFocus===(dep&&dep.id));
+    return `<div class="bo-dept-card ${active?'active':''}" onclick="focusBoDept('${dep?dep.id:d}')">
+      <div class="dn" style="color:${dep?dep.color:'#1F2933'}">${d}</div>
+      <div class="dv">${rr.length}</div>
+      <div class="ds">${rr.filter(r=>r.Status==='Clos').length} clos · ${rr.filter(r=>r.Status==='En cours').length} en cours · SLA ${slaD}%</div>
+      <div class="progress"><i style="width:${pct}%;background:${dep?dep.color:'#2F6FED'}"></i></div>
+    </div>`;
+  }).join('');
+
+  if(cBoDept) cBoDept.destroy();
+  const deptCounts = depts.map(d=>rows.filter(r=>r.Department===d).length);
+  const colors = depts.map(d=> (ORG.departments.find(x=>x.name===d)||{}).color || '#2F6FED');
+  cBoDept = new Chart(document.getElementById('chartBoDept'), {
+    type:'bar',
+    data:{ labels:depts, datasets:[{ data:deptCounts, backgroundColor:colors }] },
+    options:{ plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true}},
+      onClick(evt, els){ if(!els.length) return; focusBoDept(ORG.departments[els[0].index].id); } }
+  });
+
+  const agentIds = [...new Set(focusRows.map(r=>r.AgentId))];
+  const agentRows = agentIds.map(id=>{
+    const rr = focusRows.filter(r=>r.AgentId===id);
+    const sample = rr[0];
+    return {
+      id, name:sample.Agent, dept:sample.Department, team:sample.Team, tl:sample.TeamLeader,
+      n:rr.length,
+      clos:rr.filter(r=>r.Status==='Clos').length,
+      encours:rr.filter(r=>r.Status==='En cours').length,
+      attente:rr.filter(r=>r.Status==='En attente').length,
+      sla: rr.length? Math.round(1000*rr.filter(r=>r.SLA==='OK').length/rr.length)/10 : 0,
+      csat: rr.length? Math.round(100*rr.reduce((a,b)=>a+(+b.CSAT||0),0)/rr.length)/100 : 0,
+      esc2: rr.filter(r=>r.EscN2==='1').length,
+      esc3: rr.filter(r=>r.EscN3==='1').length
+    };
+  }).sort((a,b)=>b.n-a.n);
+
+  document.getElementById('boAgentScope').textContent = boDeptFocus
+    ? ('Département : ' + ((ORG.departments.find(d=>d.id===boDeptFocus)||{}).name || boDeptFocus))
+    : 'Tous départements';
+
+  document.querySelector('#boAgentTable tbody').innerHTML = agentRows.map(a=>`<tr class="clickable" onclick="fAgent.value='${a.id}'; const ag=allAgents().find(x=>x.id==='${a.id}'); if(ag){ fDept.value=ag.deptId; fTeam.value=ag.teamId; fLeader.value=ag.leaderId; } syncCascade(); applyAll();">
+    <td>${a.name}</td><td>${a.dept}</td><td>${a.team}</td><td>${a.tl}</td>
+    <td><b>${a.n}</b></td><td>${a.clos}</td><td>${a.encours}</td><td>${a.attente}</td>
+    <td>${a.sla}%</td><td>${a.csat}</td><td>${a.esc2}</td><td>${a.esc3}</td>
+  </tr>`).join('') || '<tr><td colspan="12">Aucun ticket</td></tr>';
+
+  if(cBoStatus) cBoStatus.destroy();
+  const stLabels = ['Clos','En cours','En attente'];
+  const stData = stLabels.map(s=>focusRows.filter(r=>r.Status===s).length);
+  cBoStatus = new Chart(document.getElementById('chartBoStatus'), {
+    type:'doughnut',
+    data:{ labels:stLabels, datasets:[{ data:stData, backgroundColor:['#2E9B5A','#E89A2C','#D94A4A'] }] },
+    options:{ plugins:{legend:{position:'bottom'}} }
+  });
+
+  document.getElementById('boTicketCount').textContent = focusRows.length + ' tickets';
+  document.querySelector('#boTicketTable tbody').innerHTML = focusRows.slice().reverse().slice(0,100).map(r=>{
+    const col = r.Status==='Clos'?'#2E9B5A': r.Status==='En cours'?'#E89A2C':'#D94A4A';
+    return `<tr>
+      <td>${r.TicketID}</td><td>${r.Department}</td><td>${r.Agent}</td><td>${r.Team}</td>
+      <td>${r.Application}</td><td>${r.Level}</td>
+      <td><span class="status-pill" style="background:${col}">${r.Status}</span></td>
+      <td>${r.SLA}</td><td>${r.Month}</td></tr>`;
+  }).join('');
+}
+function focusBoDept(id){
+  boDeptFocus = (boDeptFocus===id) ? '' : id;
+  if(boDeptFocus){
+    fDept.value = boDeptFocus;
+    syncCascade();
+  }
+  renderBackoffice(filteredTickets());
+}
+
 function applyAll(){
   const rows=filteredTickets();
   renderPilotage(rows);
   renderOrg();
   renderEquipes(rows);
+  renderBackoffice(rows);
   fillChatTargets();
 }
 function resetFilters(){
   fDept.value=''; fTeam.value=''; fLeader.value=''; fAgent.value=''; fMonth.value=''; fSource.value=''; fLevel.value='';
   selectedOrg={type:'all', id:null, label:'Périmètre global'};
+  boDeptFocus='';
   syncCascade(); applyAll();
 }
 function exportCsv(){

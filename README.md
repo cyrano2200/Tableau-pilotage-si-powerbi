@@ -39,6 +39,7 @@ Ce guide explique :
 - **Org** — organigramme Directeur → Responsables → Team Leaders → Agents
 - **Team** — tickets par équipe, team leader et agent
 - **Live** — appels temps réel + **double écoute** + **chat coach** (Agent / Team Leader)
+- **BO** — backoffice : tickets traités par département et par agent
 
 Les filtres (département, équipe, TL, agent) changent **toutes** les vues.
 
