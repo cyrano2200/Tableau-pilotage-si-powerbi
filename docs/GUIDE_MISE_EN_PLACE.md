@@ -382,17 +382,39 @@ En production Power BI : page « Backoffice » avec matrices `Department × Stat
 
 ---
 
-## 17. Planning par équipe
+## 17. Planning par équipe (onglet Plan)
 
-Onglet **Plan** :
+Onglet **Plan** : planning hebdomadaire de **tous les collaborateurs** (Directeur, Responsables, Team Leaders, Agents), groupé par département / équipe.
 
-| Élément | Contenu |
-|---------|---------|
-| Grille semaine | Lun→Dim pour Directeur, Responsables, Team Leaders, Agents |
-| Shifts | Matin / Après-midi / Soir / Standard |
-| Exceptions | Congé, Formation, Off (week-end) |
-| KPIs | Effectif affiché, équipes, présents moyens, congés, formations |
-| Couverture | Graphique des présents par jour |
-| Filtres | Département / équipe / TL / agent (mêmes filtres PM) |
+### Règle de pauses (obligatoire sur vacation travaillée)
 
-En production : brancher **Teams Shifts**, **Workforce Management** (Genesys/Nice) ou un Excel SharePoint `Fact_Planning` (`PersonId`, `Date`, `ShiftCode`, `Hours`).
+| Pause | Durée | Exemple Standard (09:00–18:00) |
+|-------|-------|-------------------------------|
+| Pausette matin | **15 min** | 10:30–10:45 |
+| Pause déjeuner | **1 h** | 12:30–13:30 |
+| Pausette soir / après-midi | **15 min** | 16:00–16:15 |
+
+Autres vacations démo : Matin (08–16), Après-midi (12–20), Soir (14–22), Formation — chacune avec les 3 pauses affichées dans la cellule du planning.
+
+### Contenu de la vue
+
+- KPIs : effectif, équipes, couverture Lun–Ven, congés, formations
+- Grille semaine (Lun→Dim) par personne, avec détail des pauses
+- Tableau absences / formations
+- Graphique de couverture journalière
+- Tableau récapitulatif des horaires de pause par vacation
+
+### Filtres
+
+Les filtres PM (département, équipe, TL, agent) réduisent le planning affiché.
+
+### Production — applications recommandées
+
+| Besoin | Application |
+|--------|-------------|
+| Planning agents | **Microsoft Teams Shifts** ou Workforce Management (Genesys / Nice) |
+| Export RH | Excel / SharePoint → Power BI (`Fact_Planning`) |
+| Pointage pauses | Softphone / CTI ou badgeuse (optionnel) |
+
+Modèle `Fact_Planning` : `PersonId`, `Date`, `Shift`, `Start`, `End`, `BreakAM_15`, `Lunch_60`, `BreakPM_15`, `Status` (Work/Off/Leave/Training).
+
