@@ -9,14 +9,14 @@ Dashboard de pilotage SI (escalades, SLA, funnel) — données kit démo Service
 
 ## Ouvrir dans Codespaces
 
-**https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=cyrano2200/equans-pilotage-si-powerbi**
+**https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=cyrano2200/Tableau-pilotage-si-powerbi**
 
 Ou depuis le dépôt : bouton **Code** → **Codespaces** → **Create codespace on main**.
 
 ## Contenu
 | Fichier | Description |
 |---------|-------------|
-| `index.html` / `Equans_SI_Dashboard_FINAL.html` | Dashboard interactif |
+| `index.html` | Tableau de pilotage SI (dashboard interactif) |
 | `data/` | Excel + CSV pour Power BI Desktop |
 | `dax/Mesures_DAX.txt` | Mesures DAX |
 | `powerquery/` | Scripts ServiceNow + Salesforce |
@@ -31,4 +31,4 @@ Ou depuis le dépôt : bouton **Code** → **Codespaces** → **Create codespace
 4. Reproduire la maquette `docs/dashboard_powerbi_style_helpdesk.png`
 
 ## Auteur
-BAHJI Mohammed — Master PSI — Equans IT Hubs / MIAGE Casa / FEDE
+BAHJI Mohammed — Master PSI — MIAGE Casa / FEDE
