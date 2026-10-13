@@ -173,6 +173,7 @@ Microsoft Teams <── Power Automate <── Chat coach (Agent / TL) ───
 | Perdus | Abandonnés avant réponse |
 | ASA | Temps d’attente moyen (secondes) |
 | État agent | Disponible / En appel / Wrap-up / Pause / Ringing |
+| Temps par état | Chronomètre de l’état courant + cumuls Dispo / Appel / Wrap-up / Pause (session) |
 
 ### 6.2 Branchement téléphonie
 
