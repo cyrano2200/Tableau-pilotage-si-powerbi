@@ -1,10 +1,14 @@
-# Equans Power BI — Produit Final
-## Pilotage SI : Helpdesk N1 · Support N2 · Expertise N3
+# Tableau de pilotage SI — Démarrage rapide
+## Helpdesk · N2 · N3 · Salesforce · SAP · Packaging · Éditeurs
+
+### Guide complet de mise en place
+**Lire d’abord :** [`docs/GUIDE_MISE_EN_PLACE.md`](docs/GUIDE_MISE_EN_PLACE.md)  
+→ applications à utiliser, liaison tickets / organigramme / appels, checklist production.
 
 ### Option A — Voir le dashboard tout de suite (sans Power BI)
-1. Double-cliquez sur **`Equans_SI_Dashboard_FINAL.html`**
-2. Il s’ouvre dans votre navigateur (Chrome / Edge)
-3. Vous voyez le tableau de pilotage (escalades, SLA, funnel, matrice KPI…)
+1. Ouvrez **`index.html`** (ou `Equans_SI_Dashboard_FINAL.html`)
+2. Ou la démo en ligne : https://cyrano2200.github.io/Tableau-pilotage-si-powerbi/
+3. Naviguez : **KPI · Org · Team · Live** (appels temps réel)
 
 ### Option B — Produit Power BI Desktop (recommandé pour le mémoire / Equans)
 1. Installez **Power BI Desktop** (gratuit) : https://powerbi.microsoft.com/desktop/

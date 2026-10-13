@@ -1,4 +1,34 @@
-# Tableau de Pilotage SI
+# Tableau de pilotage SI
+
+Dashboard de pilotage SI : **KPI**, **organigramme**, **équipes**, **appels temps réel** — départements SAP, Poste de travail, Packaging, Salesforce, Helpdesk, Niveau 2, Niveau 3, Éditeurs.
+
+## Démo en ligne (GitHub Pages)
+
+**https://cyrano2200.github.io/Tableau-pilotage-si-powerbi/**
+
+## Comment tout mettre en place
+
+**Guide complet (applications, liaisons tickets / org / appels) :**
+
+### 📘 [docs/GUIDE_MISE_EN_PLACE.md](docs/GUIDE_MISE_EN_PLACE.md)
+
+Ce guide explique :
+- **quelles applications utiliser** (ServiceNow, Salesforce, Power BI, Entra ID, téléphonie…)
+- **comment lier les tickets** ServiceNow + Salesforce
+- **comment brancher l’organigramme** (Directeur → Responsables → Team Leaders → Agents)
+- **comment connecter les appels** (entrants, attente, répondus, perdus, ASA)
+- **checklist PM** de mise en production
+
+### Stack recommandée (résumé)
+
+| Besoin | Application |
+|--------|-------------|
+| Tickets ITSM | **ServiceNow** |
+| Cases CRM | **Salesforce** |
+| Reporting | **Power BI** (Desktop + Service) |
+| Organigramme | **Entra ID** + Excel/SharePoint RH |
+| Appels live | **Genesys / Teams Phone / 3CX** ou CTI ServiceNow |
+| Automatisation | **Power Automate** / Azure Data Factory |
 
 ## Vues du dashboard
 
@@ -7,37 +37,35 @@
 - **Team** — tickets par équipe, team leader et agent
 - **Live** — suivi temps réel des appels (entrants, attente, répondus, perdus…)
 
-Départements : **SAP**, **Poste de travail**, **Packaging**, **Salesforce**, **Helpdesk**, **Niveau 2**, **Niveau 3**, **Éditeurs**. Les filtres changent toutes les vues.
-
-**Helpdesk N1 · Support N2 · Expertise N3**  
-Dashboard de pilotage SI (escalades, SLA, funnel) — données kit démo ServiceNow + Salesforce.
-
-## Démo en ligne (GitHub Pages)
-
-**https://cyrano2200.github.io/Tableau-pilotage-si-powerbi/**
+Les filtres (département, équipe, TL, agent) changent **toutes** les vues.
 
 ## Ouvrir dans Codespaces
 
 **https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=cyrano2200/Tableau-pilotage-si-powerbi**
 
-Ou depuis le dépôt : bouton **Code** → **Codespaces** → **Create codespace on main**.
+Ou : bouton **Code** → **Codespaces** → **Create codespace on main**.
 
-## Contenu
+## Contenu du dépôt
+
 | Fichier | Description |
 |---------|-------------|
-| `index.html` | Tableau de pilotage SI (dashboard interactif) |
+| `index.html` | Tableau de pilotage SI (démo interactive) |
+| `docs/GUIDE_MISE_EN_PLACE.md` | **Mise en place & applications** |
 | `data/` | Excel + CSV pour Power BI Desktop |
 | `dax/Mesures_DAX.txt` | Mesures DAX |
 | `powerquery/` | Scripts ServiceNow + Salesforce |
-| `docs/` | Maquettes + guide |
-| `START_HERE_FR.md` | Mode d'emploi |
+| `docs/` | Maquettes + guides |
+| `START_HERE_FR.md` | Démarrage rapide |
+| `BUILD_POWERBI_STEPS.md` | Build projet Power BI |
 | `Equans_Pilotage_SI_PowerBI/` | Projet Power BI Desktop (.pbip) |
 
-## Power BI Desktop
+## Power BI Desktop (rapide)
+
 1. Ouvrir Power BI Desktop  
 2. Importer `data/Equans_PowerBI_Pilotage_SI_Modele_Demo.xlsx` (ou ouvrir le `.pbip`)  
 3. Coller les mesures `dax/Mesures_DAX.txt`  
-4. Reproduire la maquette `docs/dashboard_powerbi_style_helpdesk.png`
+4. Suivre `docs/GUIDE_MISE_EN_PLACE.md` pour brancher les vraies sources  
 
 ## Auteur
+
 BAHJI Mohammed — Master PSI — MIAGE Casa / FEDE
