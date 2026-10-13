@@ -707,7 +707,7 @@ function startMonitor(agentId){
   const a = callState.agentMap[agentId];
   if(!a){ showToast('Agent introuvable'); return; }
   if(!(a.status==='En appel'||a.status==='Ringing')){ showToast('Double écoute possible uniquement si agent en appel'); return; }
-  if(monitor.active && monitor.agentId!==agentId){ showToast('Terminez d'abord l'écoute en cours'); return; }
+  if(monitor.active && monitor.agentId!==agentId){ showToast("Terminez d'abord l'écoute en cours"); return; }
   monitor = { active:true, agentId, mode: monitor.mode||'silent', started: Date.now(), agentName:a.name, team:a.team, dept:a.deptName };
   showToast('Double écoute demarree — mode ' + monitorModeLabel(monitor.mode));
   updateMonitorBanner();
