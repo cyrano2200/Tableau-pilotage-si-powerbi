@@ -298,3 +298,19 @@ Ouvrir la démo : ouvrir `index.html` ou le lien Pages du README.
 ---
 
 *Master PSI — BAHJI Mohammed — Tableau de pilotage SI*
+
+
+---
+
+## 13. Double écoute & chat coach (vue Live)
+
+Dans la démo HTML (onglet **Live**) :
+
+| Fonction | Usage |
+|----------|--------|
+| **Double écoute** | Sur un agent **En appel** : Silence (écoute seule), Whisper (coach agent), Barge (conférence) |
+| **Chat** | Envoyer un message à un **Agent** ou un **Team Leader** depuis le tableau (historique local) |
+
+En production, branchez ces actions sur votre CTI / contact center :
+- Double écoute → API monitoring (Genesys, Nice, 3CX, Teams)
+- Chat → **Microsoft Teams** (Adaptive Card / chat 1:1) ou softphone messaging
