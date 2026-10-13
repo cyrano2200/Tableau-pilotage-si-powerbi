@@ -7,7 +7,7 @@
 - **Team** — tickets par équipe, team leader et agent
 - **Live** — suivi temps réel des appels (entrants, attente, répondus, perdus…)
 
-Départements : **SAP**, **Poste de travail**, **Packaging**. Les filtres changent toutes les vues.
+Départements : **SAP**, **Poste de travail**, **Packaging**, **Salesforce**, **Helpdesk**, **Niveau 2**, **Niveau 3**, **Éditeurs**. Les filtres changent toutes les vues.
 
 **Helpdesk N1 · Support N2 · Expertise N3**  
 Dashboard de pilotage SI (escalades, SLA, funnel) — données kit démo ServiceNow + Salesforce.
