@@ -340,6 +340,7 @@ Maquettes : `docs/dashboard_powerbi_style_helpdesk.png`, `docs/architecture_powe
 |--------|------|
 | `index.html` | Démo interactive (KPI · Org · Team · Live + écoute + chat) |
 | `docs/GUIDE_MISE_EN_PLACE.md` | **Ce guide** |
+| `docs/logo_pilotage_si.png` | Logo neutre Tableau de pilotage SI (sans marque tierce) |
 | `powerquery/*.pq` | Extraction SNOW / SF / union |
 | `dax/Mesures_DAX.txt` | KPIs escalade & SLA |
 | `data/` | CSV / Excel démo |
