@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Tableau de pilotage SI</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <style>
 :root {
   --bg:#F4F6F8; --card:#fff; --header:#1E4E8C; --sidebar:#2C333A;
@@ -433,6 +434,52 @@ const TICKETS = [{"TicketID": "INC-30001", "Source": "ServiceNow", "Priority": "
 const PEOPLE = [];
 const CALL_REASONS = ["Mot de passe", "Accès SAP", "Salesforce Case", "Installation package", "Imprimante", "VPN", "Licence Office", "Escalade N2", "Escalade N3", "Incident Éditeur", "Erreur FI", "Déploiement SCCM", "Poste lent", "Demande matériel"];
 
+
+if (window.ChartDataLabels) {
+  Chart.register(ChartDataLabels);
+  Chart.defaults.plugins.datalabels = {
+    color: '#1F2933',
+    font: { weight: '700', size: 11, family: 'Segoe UI' },
+    anchor: 'end',
+    align: 'top',
+    clamp: true,
+    formatter: (v) => (v===0 || v===null || v===undefined) ? '' : v
+  };
+}
+const LABEL = {
+  bar: {
+    datalabels: {
+      anchor: 'end', align: 'top', offset: 0,
+      color: '#1F2933',
+      font: { weight:'700', size:11 },
+      formatter: (v) => (v||v===0) && v!==0 ? v : (v===0?'0':'')
+    }
+  },
+  barH: {
+    datalabels: {
+      anchor: 'end', align: 'right', offset: 4,
+      color: '#1F2933',
+      font: { weight:'700', size:11 },
+      formatter: (v) => (v||v===0) ? v : ''
+    }
+  },
+  doughnut: {
+    datalabels: {
+      color: '#fff',
+      font: { weight:'800', size:12 },
+      formatter: (v,ctx) => {
+        const t = ctx.chart.data.datasets[0].data.reduce((a,b)=>a+(+b||0),0);
+        if(!v) return '';
+        const pct = t? Math.round(v*100/t) : 0;
+        return v + ' ('+pct+'%)';
+      }
+    }
+  },
+  gauge: {
+    datalabels: { display: false }
+  }
+};
+
 let g1,g2,cMonth,cApp,cAgents,cCalls,cReasons,cBoDept,cBoStatus;
 let boDeptFocus = "";
 let selectedOrg = { type:'all', id:null, label:'Périmètre global' };
@@ -501,7 +548,7 @@ function gaugeChart(id, value, color){
   return new Chart(document.getElementById(id), {
     type:'doughnut',
     data:{ datasets:[{ data:[value, Math.max(0,100-value)], backgroundColor:[color,'#E5E7EB'], borderWidth:0 }] },
-    options:{ rotation:-90, circumference:180, cutout:'72%', plugins:{legend:{display:false}, tooltip:{enabled:false}} },
+    options:{ rotation:-90, circumference:180, cutout:'72%', plugins:{legend:{display:false}, tooltip:{enabled:false}, datalabels:{display:false}} },
     plugins:[{ id:'textCenter', afterDraw(chart){
       const {ctx, chartArea:{left,right,top,bottom}} = chart;
       ctx.save(); ctx.font='bold 18px Segoe UI'; ctx.fillStyle='#1F2933';
@@ -526,19 +573,19 @@ function renderPilotage(rows){
   g2=gaugeChart('g2', k.esc_n2_n3, k.esc_n2_n3<=20?'#2E9B5A':'#D94A4A');
   if(cMonth) cMonth.destroy();
   cMonth=new Chart(chartMonth, { type:'bar', data:{ labels:k.months, datasets:[{data:k.volume_by_month, backgroundColor:'#2F6FED'}] },
-    options:{ plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true}} } });
+    options:{ plugins:{legend:{display:false}, datalabels:{anchor:'end', align:'top', color:'#1F2933', font:{weight:'700',size:11}, formatter:v=>v}}, scales:{y:{beginAtZero:true, grace:'15%', ticks:{precision:0}}} } });
   if(cApp) cApp.destroy();
   const labels = fDept.value ? k.apps : k.depts;
   const data = fDept.value ? k.app_counts : k.dept_counts;
   cApp=new Chart(chartApp, { type:'bar', data:{ labels, datasets:[{data, backgroundColor:['#C0392B','#2F6FED','#2E9B5A','#00A1E0','#16A34A','#E89A2C','#D94A4A','#7C3AED','#6B7280','#0B7A75']}] },
-    options:{ indexAxis:'y', plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true}} } });
+    options:{ indexAxis:'y', plugins:{legend:{display:false}, datalabels:{anchor:'end', align:'right', offset:4, color:'#1F2933', font:{weight:'700',size:11}, formatter:v=>v}}, scales:{x:{beginAtZero:true, grace:'15%', ticks:{precision:0}}} } });
 
   // by team bars
   const teams=[...new Set(rows.map(t=>t.Team))];
   const max=Math.max(1,...teams.map(t=>rows.filter(r=>r.Team===t).length));
   byTeam.innerHTML = teams.map(t=>{
     const n=rows.filter(r=>r.Team===t).length;
-    return `<div class="rowb"><div>${t}</div><div class="track"><div class="fill" style="width:${Math.round(n/max*100)}%"></div></div><div>${n}</div></div>`;
+    return `<div class="rowb"><div>${t}</div><div class="track"><div class="fill" style="width:${Math.round(n/max*100)}%"></div></div><div style="font-weight:800;font-size:12px">${n}</div></div>`;
   }).join('') || '<div class="hint">Aucun ticket</div>';
 
   // agents chart
@@ -546,7 +593,7 @@ function renderPilotage(rows){
   const top=agents.map(a=>({a, n:rows.filter(r=>r.Agent===a).length})).sort((x,y)=>y.n-x.n).slice(0,8);
   if(cAgents) cAgents.destroy();
   cAgents=new Chart(chartAgents, { type:'bar', data:{ labels:top.map(x=>x.a.split(' ')[0]), datasets:[{data:top.map(x=>x.n), backgroundColor:'#0B7A75'}] },
-    options:{ plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true}} } });
+    options:{ plugins:{legend:{display:false}, datalabels:{anchor:'end', align:'top', color:'#1F2933', font:{weight:'700',size:11}, formatter:v=>v}}, scales:{y:{beginAtZero:true, grace:'15%', ticks:{precision:0}}} } });
 }
 
 function renderOrg(){
@@ -737,11 +784,11 @@ function tickCalls(){
   if(cCalls) cCalls.destroy();
   cCalls=new Chart(chartCalls, { type:'doughnut',
     data:{ labels:['Répondus','En attente','Perdus','En cours'], datasets:[{ data:[callState.answered, callState.waiting, callState.lost, callState.talking], backgroundColor:['#2E9B5A','#E89A2C','#D94A4A','#0B7A75'] }] },
-    options:{ plugins:{legend:{position:'bottom'}} } });
+    options:{ plugins:{legend:{position:'bottom'}, datalabels:{color:'#fff', font:{weight:'800', size:11}, formatter:(v,ctx)=>{ const arr=ctx.chart.data.datasets[0].data; const t=arr.reduce((a,b)=>a+(+b||0),0); return v? (v+'\n'+Math.round(v*100/(t||1))+'%') : ''; }}} } });
   const topReasons=Object.entries(callState.reasons).sort((a,b)=>b[1]-a[1]).slice(0,6);
   if(cReasons) cReasons.destroy();
   cReasons=new Chart(chartReasons, { type:'bar', data:{ labels:topReasons.map(x=>x[0]), datasets:[{data:topReasons.map(x=>x[1]), backgroundColor:'#1E4E8C'}] },
-    options:{ indexAxis:'y', plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true}} } });
+    options:{ indexAxis:'y', plugins:{legend:{display:false}, datalabels:{anchor:'end', align:'right', offset:4, color:'#1F2933', font:{weight:'700',size:11}, formatter:v=>v}}, scales:{x:{beginAtZero:true, grace:'15%', ticks:{precision:0}}} } });
 }
 
 function syncCascade(){
@@ -899,7 +946,8 @@ function renderBackoffice(rows){
   cBoDept = new Chart(document.getElementById('chartBoDept'), {
     type:'bar',
     data:{ labels:depts, datasets:[{ data:deptCounts, backgroundColor:colors }] },
-    options:{ plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true}},
+    options:{ plugins:{legend:{display:false}, datalabels:{anchor:'end', align:'top', color:'#1F2933', font:{weight:'700',size:11}, formatter:v=>v}},
+      scales:{y:{beginAtZero:true, grace:'15%', ticks:{precision:0}}},
       onClick(evt, els){ if(!els.length) return; focusBoDept(ORG.departments[els[0].index].id); } }
   });
 
@@ -936,7 +984,7 @@ function renderBackoffice(rows){
   cBoStatus = new Chart(document.getElementById('chartBoStatus'), {
     type:'doughnut',
     data:{ labels:stLabels, datasets:[{ data:stData, backgroundColor:['#2E9B5A','#E89A2C','#D94A4A'] }] },
-    options:{ plugins:{legend:{position:'bottom'}} }
+    options:{ plugins:{legend:{position:'bottom'}, datalabels:{color:'#fff', font:{weight:'800', size:12}, formatter:(v,ctx)=>{ const t=ctx.chart.data.datasets[0].data.reduce((a,b)=>a+(+b||0),0); return v? (v+' ('+Math.round(v*100/(t||1))+'%)') : ''; }}} }
   });
 
   document.getElementById('boTicketCount').textContent = focusRows.length + ' tickets';
