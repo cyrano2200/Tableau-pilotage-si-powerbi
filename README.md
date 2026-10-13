@@ -13,10 +13,11 @@ Dashboard de pilotage SI : **KPI**, **organigramme**, **équipes**, **appels tem
 ### 📘 [docs/GUIDE_MISE_EN_PLACE.md](docs/GUIDE_MISE_EN_PLACE.md)
 
 Ce guide explique :
-- **quelles applications utiliser** (ServiceNow, Salesforce, Power BI, Entra ID, téléphonie…)
+- **quelles applications utiliser** (ServiceNow, Salesforce, Power BI, Entra ID, téléphonie, Teams…)
 - **comment lier les tickets** ServiceNow + Salesforce
 - **comment brancher l’organigramme** (Directeur → Responsables → Team Leaders → Agents)
 - **comment connecter les appels** (entrants, attente, répondus, perdus, ASA)
+- **double écoute** (Silence / Whisper / Barge) et **chat coach** vers Agent / Team Leader
 - **checklist PM** de mise en production
 
 ### Stack recommandée (résumé)
@@ -28,6 +29,8 @@ Ce guide explique :
 | Reporting | **Power BI** (Desktop + Service) |
 | Organigramme | **Entra ID** + Excel/SharePoint RH |
 | Appels live | **Genesys / Teams Phone / 3CX** ou CTI ServiceNow |
+| Double écoute | API monitoring CTI (Listen / Whisper / Barge) |
+| Chat coach | **Microsoft Teams** via Power Automate |
 | Automatisation | **Power Automate** / Azure Data Factory |
 
 ## Vues du dashboard
@@ -35,7 +38,7 @@ Ce guide explique :
 - **KPI** — escalades, SLA, volumes filtrés
 - **Org** — organigramme Directeur → Responsables → Team Leaders → Agents
 - **Team** — tickets par équipe, team leader et agent
-- **Live** — suivi temps réel des appels (entrants, attente, répondus, perdus…)
+- **Live** — appels temps réel + **double écoute** + **chat coach** (Agent / Team Leader)
 
 Les filtres (département, équipe, TL, agent) changent **toutes** les vues.
 
