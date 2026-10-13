@@ -67,7 +67,7 @@ Ou : bouton **Code** → **Codespaces** → **Create codespace on main**.
 ## Power BI Desktop (rapide)
 
 1. Ouvrir Power BI Desktop  
-2. Importer `data/Equans_PowerBI_Pilotage_SI_Modele_Demo.xlsx` (ou ouvrir le `.pbip`)  
+2. Importer `data/Tableau_PowerBI_Pilotage_SI_Modele_Demo.xlsx` (ou ouvrir le `.pbip`)  
 3. Coller les mesures `dax/Mesures_DAX.txt`  
 4. Suivre `docs/GUIDE_MISE_EN_PLACE.md` pour brancher les vraies sources  
 

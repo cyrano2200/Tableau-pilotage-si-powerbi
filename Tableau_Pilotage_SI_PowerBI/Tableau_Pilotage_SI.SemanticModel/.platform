@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "Report",
-    "displayName": "Equans Pilotage SI"
+    "type": "SemanticModel",
+    "displayName": "Tableau Pilotage SI Model"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "eb5a679d-b28e-42a9-8d0d-20ec307176c1"
+    "logicalId": "446d1b0a-4cda-4b56-a4b8-9fb17a0b5624"
   }
 }

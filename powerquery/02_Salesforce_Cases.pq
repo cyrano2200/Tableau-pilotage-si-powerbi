@@ -1,6 +1,6 @@
 // ============================================================
 // Power Query (M) — Salesforce Cases → Fact partiel
-// Equans IT Hubs — Helpdesk / N2 / N3
+// Direction des Systèmes d'Information — Helpdesk / N2 / N3
 // ------------------------------------------------------------
 // Power BI Desktop :
 //   Obtenir des données > Plus > Services en ligne > Salesforce Objects
@@ -16,7 +16,7 @@ let
     Source = Salesforce.Data("https://login.salesforce.com/", [ApiVersion = 58]),
     CaseTable = Source{[Name = "Case"]}[Data],
 
-    // Garder les colonnes utiles (adapter noms API Equans)
+    // Garder les colonnes utiles (adapter noms API)
     Keep = Table.SelectColumns(
         CaseTable,
         {
@@ -79,7 +79,7 @@ in
     Rename
 
 
-// NOTES EQUANS
+// NOTES PILOTAGE SI
 // 1) Auth : compte OAuth dédié Power BI (pas compte personnel).
 // 2) Pour N2/N3 fiables : créer Support_Tier__c (Helpdesk/N2/N3)
 //    mis à jour par Omni-Channel / assignment rules / Flow.

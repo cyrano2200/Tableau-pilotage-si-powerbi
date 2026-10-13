@@ -1,6 +1,6 @@
 // ============================================================
 // Power Query (M) — ServiceNow Incidents → Fact partiel
-// Equans IT Hubs — Helpdesk / N2 / N3
+// Direction des Systèmes d'Information — Helpdesk / N2 / N3
 // ------------------------------------------------------------
 // Dans Power BI Desktop :
 //   Obtenir des données > Plus > En ligne services > ServiceNow
@@ -40,7 +40,7 @@ let
         }
     ),
 
-    // Mapping priorité ServiceNow -> P1..P4 (adapter aux valeurs Equans)
+    // Mapping priorité ServiceNow -> P1..P4 (adapter aux valeurs cibles)
     AddPriority = Table.AddColumn(
         Typed,
         "Priority",
@@ -52,7 +52,7 @@ let
         type text
     ),
 
-    // Mapping groupe d'assignation -> niveau (à calibrer avec Equans)
+    // Mapping groupe d'assignation -> niveau (à calibrer avec le métier)
     AddLevel = Table.AddColumn(
         AddPriority,
         "CurrentLevel",
@@ -94,7 +94,7 @@ in
     Rename
 
 
-// NOTES EQUANS
+// NOTES PILOTAGE SI
 // 1) Préférer un compte technique lecture seule + ACL limitées.
 // 2) Pour EscalatedToN2 / EscalatedToN3 : joindre la table
 //    sys_audit / metric_instance / reassignment history, ou un

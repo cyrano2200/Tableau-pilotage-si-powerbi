@@ -1,15 +1,15 @@
-EQUANS — TABLEAU DE PILOTAGE SI (POWER BI)
+TABLEAU DE PILOTAGE SI — TABLEAU DE PILOTAGE SI (POWER BI)
 ==========================================
 
 1) Décompressez ce dossier sur votre PC, par ex. :
-   C:\Users\lenovo\Desktop\kit power bi equans\Tableau_Pilotage_SI_PowerBI
+   C:\Users\lenovo\Desktop\kit power bi pilotage-si\Tableau_Pilotage_SI_PowerBI
 
-2) Double-cliquez : Equans_Pilotage_SI.pbip
+2) Double-cliquez : Tableau_Pilotage_SI.pbip
    (ouvre Power BI Desktop)
 
 3) Si Power BI demande le paramètre DataFolder, collez le chemin COMPLET
    du dossier data\ (avec le \ final), exemple :
-   C:\Users\lenovo\Desktop\kit power bi equans\Tableau_Pilotage_SI_PowerBI\data\
+   C:\Users\lenovo\Desktop\kit power bi pilotage-si\Tableau_Pilotage_SI_PowerBI\data\
 
 4) Accueil → Actualiser
 
@@ -21,8 +21,8 @@ EQUANS — TABLEAU DE PILOTAGE SI (POWER BI)
    - CSAT, SLA Helpdesk / N2 / N3
    - Graphiques par niveau et application
 
-6) Fichier → Enregistrer sous → Equans_Pilotage_SI_Helpdesk_N2_N3.pbix
+6) Fichier → Enregistrer sous → Tableau_Pilotage_SI_Helpdesk_N2_N3.pbix
 
 Option : exécuter Build-From-Excel.ps1 (clic droit → Exécuter avec PowerShell)
 
-Thème couleurs : Affichage → Thèmes → Parcourir → Equans_SI_Theme.json
+Thème couleurs : Affichage → Thèmes → Parcourir → Tableau_SI_Theme.json

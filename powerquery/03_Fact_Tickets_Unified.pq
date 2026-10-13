@@ -61,4 +61,4 @@ in
 // - Désactiver "Charger" sur SN et SF ; ne charger que Fact_Tickets_Unified + Dims
 // - Incremental refresh sur CreatedDate (Premium/PPU/Fabric recommandé)
 // - Gateways si sources on-prem / private link
-// - En prod Equans : préférer un Dataflow qui matérialise Fact_Tickets_Unified
+// - En prod : préférer un Dataflow qui matérialise Fact_Tickets_Unified

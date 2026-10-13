@@ -1,5 +1,5 @@
 ===============================================================
-EQUANS IT Hubs — Mesures DAX Power BI
+Direction des Systèmes d'Information — Mesures DAX Power BI
 Pilotage SI : Helpdesk / N2 / N3 / Escalades
 ===============================================================
 Prérequis modèle :

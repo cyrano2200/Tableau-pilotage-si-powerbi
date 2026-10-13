@@ -2,7 +2,7 @@
   "version": "4.0",
   "datasetReference": {
     "byPath": {
-      "path": "../Equans_Pilotage_SI.SemanticModel"
+      "path": "../Tableau_Pilotage_SI.SemanticModel"
     }
   }
 }
