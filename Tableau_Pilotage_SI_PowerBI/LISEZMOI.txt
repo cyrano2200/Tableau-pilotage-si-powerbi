@@ -1,4 +1,4 @@
-TABLEAU DE PILOTAGE SI — TABLEAU DE PILOTAGE SI (POWER BI)
+TABLEAU DE PILOTAGE SI (POWER BI)
 ==========================================
 
 1) Décompressez ce dossier sur votre PC, par ex. :
